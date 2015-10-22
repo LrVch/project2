@@ -4,7 +4,7 @@ $legacy-support-for-ie7: false;
 $legacy-support-for-ie8: false;
 $inline-block-alignment: top;
 
-
+ 
 // font fase
 $font-base-family: "open_sanssemibold", Arial, Helvetica, Garuda, sans-serif;
 $font-family-regular: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
@@ -14,15 +14,15 @@ $font-family-bold: "open_sansbold", Arial, Helvetica, Garuda, sans-serif;
 
 // font size
 $font-base-size: 14px;
-$font-size-extra-small: 9px;
-$font-size-small: 12px;
-$font-size-regular-samllest: 13px;
-$font-size-regular: 20px;
-$font-size-big: 24px;
+$font-size-extra-small: 12px;
+$font-size-regular-small: 16px;
+$font-size-regular: 18px;
+$font-size-regular-big: 20px;
+//$font-size-big: 24px;
 
 
 //font style
-$font-style-italic: italic;
+$font-style-italic: italic;  
 
 
 // font width
@@ -37,15 +37,33 @@ $dir: "../img";
 // colors
 $clrs: ( 
   white: #fff,
+  grey: #333333,
+  grey-lighten: #7f7f7f,
+  grey-light: #5d656c,
+  orange: #ff6600,
+  dark: #010101,
+  blue: #5db2fc,
+  
+  
+
+  
+  
+ 
+);
+
+  //
+  /*dark: #727070,
+  dark-lighten: #9c9c9c,
+  dark-light: #646464,
+  dark-grey: #a9a7a7,
+  dark-dark: #7b7979,
+  //
   white-light: #fbfbfb,
   white-dark: #f7f6f6,
   white-lighten: #f0f0f0,
   //
   pink-light: #f2e7d0,
   //
-  grey: #bababa,
-  grey-lighten: #f7f7f7,
-  grey-light: #e5e3e2,
   grey-hover: #e4e3e3,
   grey-hover-dark: #bebdbd,
   gray-light-extra: #eae9e9,
@@ -62,13 +80,6 @@ $clrs: (
   gray-work: #bebebe,
   gray-bg-work: #f2f2f2,
   grey-work-bg: #f6f5f4,
-  //
-  dark: #727070,
-  dark-lighten: #9c9c9c,
-  dark-light: #646464,
-  dark-grey: #a9a7a7,
-  dark-dark: #7b7979,
-  //
   brown-light: #ddce9b,
   brown-lighten: #f4ce82,
   brown-darken: #dfb866,
@@ -82,8 +93,7 @@ $clrs: (
   green-dark: #3da98e,
   green-light: #66dbbe,
   green-darken: #1e7465,
-  green-skill: #1e7465
-);
+  green-skill: #1e7465,*/
 
 
 

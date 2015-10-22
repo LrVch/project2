@@ -138,13 +138,13 @@ $icon) {
   width: $sprite-width;
 }
 // вызов примеси генерации спрайтов для класса .socials__link--#{$social}
-$socials: vk, tw, fb;
-$socials-map: sprite-map('icons/*.png', $spacing: 70px, $layout: vertical);
-@each $social in $socials {
-  .socials__link--#{$social} {
-    @include get-sprite($socials-map, $social);
-  }
-}
+//socials: vk, tw, fb;
+//$socials-map: sprite-map('icons/*.png', $spacing: 70px, $layout: vertical);
+//@each $social in $socials {
+//  .socials__link--#{$social} {
+//    @include get-sprite($socials-map, $social);
+//  }
+//}
 
 
 
