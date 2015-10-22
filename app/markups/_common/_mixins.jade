@@ -17,16 +17,26 @@ mixin nav(className, items, activeIndx)
           li(class=className + "__item")
             a(href="#" class= className + "__link " + ((activeIndx == index) ? className + '__link' + '--active' : ''))= item
      
-// простой список с сылками     
+// простой список с сылками
+//- +v('links', ['Главная', 'Новости', "О компании", "Сравнение"])
 mixin links(className, links)
   div(class= className)
     ul(class= className + "__list")
       each link in links
         li(class= className + "__item")
-          a(href="#" class= className + "__link")= link     
+          a(href="#" class= className + "__link")= link  
+          
+// breadcrumbs
+//- +breadcrumbs('breadcrumbs', ['Главная', 'Новости', "О компании"], 2)
+mixin breadcrumbs(className, items, activeIndx)
+  div(class= className)  
+    ul(class= className + "__list")
+      each item, index in items
+        li(class=className + "__item")
+          a(href="#" class= className + "__link " + ((items.length == index + 1) ? className + '__link' + '--active' : ''))= (items.length == index + 1) ? item : item + " >" 
+          
 //- +form()
 //- +form('form', '#', 'post', {textarea:{"fds": "desc"}, input:{submit:"submit"}} )    
-
 mixin form(className, action, method, inputs)
   form(class=className action=action method=method)
     each attr, typeInput in inputs

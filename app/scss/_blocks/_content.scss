@@ -1,0 +1,7 @@
+.content {
+  //background: map-get($clrs, grey-light);
+  padding-top: 32px; 
+}
+.content__inner {
+  @extend %container;
+} 

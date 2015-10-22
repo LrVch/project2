@@ -30,12 +30,12 @@
   font-style: normal;
 }
 
-//%title-block {
-//  font-family: $font-base-family;
-//  font-size: $font-size-big;
-//  line-height: $font-size-big;
-//  color: map-get($clrs, grey-title);
-//}
+%title-main {
+  font-family: $font-family-bold;
+  font-size:   $font-size-regular-big;
+  line-height: $font-size-regular-big + 2;
+  color: map-get($clrs, grey);
+}
 
 //%title-section {
 //  font-size: $font-size-big-large;

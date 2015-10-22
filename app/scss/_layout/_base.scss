@@ -33,6 +33,7 @@ body {
   height: 100%;
   overflow: hidden;
   min-width: $container-width + 20;
+  background: map-get($clrs, grey-light);
   &:after {
     display: block;
     position: relative;

@@ -1,0 +1,33 @@
+.breadcrumbs {
+  font-size: 0;
+}
+
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 3px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.breadcrumbs__link {
+  display: block;
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  color: map-get($clrs, grey);
+  line-height: $font-base-size +1;
+  text-decoration: none;
+}
+
+.breadcrumbs__link--active {
+  border-bottom: 1px solid map-get($clrs, orange);
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  color: map-get($clrs, orange);
+}

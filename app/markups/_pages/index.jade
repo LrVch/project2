@@ -1,15 +1,16 @@
 extends ../_templates/main
 
-block title 
+block title  
   | Main page
-  
+   
 block content
-  .breadcrumbs
-  .title 
+  include ../_blocks/_breadcrumbs
+  include ../_blocks/_title-main  
+  
   .row
     .small-col
       aside.filter
     .big-col
       .goods
-      .paginator
+      .paginator 
   .info
