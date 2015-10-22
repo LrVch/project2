@@ -1,0 +1,29 @@
+//- социальные иконки
+//- +socials('social', {vk:'в контакте', fb:'фэйсбук', tw:'твиттер'})
+mixin socials(className, items)
+	div(class= className)
+		ul(class= className + "__list")
+			each item, index in items
+				li(class= className + "__item")
+					a(href="#" class= className + "__link " + className + "__link--" + index  title= item)= item   
+          
+//- навигация
+//- +nav('navigation', ['Главная', 'Новости', "О компании", "Сравнение"], 2)
+mixin nav(className, items, activeIndx)
+	nav(class= className)
+		.container
+			ul(class= className + "__list")
+				each item, index in items
+					li(class=className + "__item " + ((activeIndx == indx) ? className + '__item' + '--active' : ''))
+						a(href="#" class= className + "__link")= item
+            
+//- +form()
+//- +form('form', '#', 'post', {textarea:{"fds": "desc"}, input:{submit:"submit"}} )    
+
+mixin form(className, action, method, inputs)
+	form(class=className action=action method=method)
+		each attr, typeInput in inputs
+			each name, type in attr
+				div(class=className + "__groupe")
+					label(class=className + "__label" for=name)
+					#{typeInput}(class=className + "__input" type=type name=name id=name) 

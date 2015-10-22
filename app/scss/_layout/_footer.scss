@@ -1,0 +1,9 @@
+.page-footer {
+  background: #000;
+  
+}
+.page-footer__inner {
+  @extend %container;
+  background: #0f0; 
+  height: 100%;
+}

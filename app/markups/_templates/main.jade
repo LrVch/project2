@@ -1,0 +1,48 @@
+include ../_common/_mixins
+ 
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+    meta(name="author" content="")
+
+    // build:css css/vendor.min.css 
+    link(rel="stylesheet" href="bower/normalize-css/normalize.css")
+    // endbuild 
+
+    // build:css css/style.min.css 
+    link(rel="stylesheet" type='text/css' href="css/style.css")
+    // endbuild 
+
+    link(rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16")
+
+    // build:js js/modernizr.min.js  
+    script(src="bower/modernizr/modernizr.js")
+    // endbuild 
+
+    title 
+      block title
+ 
+  body
+    .wrapper
+      .maincontent
+        include ../_blocks/_header
+        block content
+        
+        
+        
+    include ../_blocks/_footer
+    
+    
+    //- скрипты 
+    // build:js js/vendor.min.js 
+    script(src="bower/jquery/dist/jquery.js")
+    // endbuild 
+    
+    // build:js js/script.min.js 
+    script(src="js/script.js")
+    // endbuild 
