@@ -1,0 +1,41 @@
+.navigation {
+  font-size: 0;
+  border-bottom: 2px solid map-get($clrs, grey-border);
+  background: #fff;
+}
+
+.navigation__inner {
+  @extend %container;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navigation__link {
+  display: block;
+  padding: 17px 16px 17px 15px;
+  font-family: $font-family-regular;
+  font-size: $font-size-regular-small;
+  line-height: $font-size-regular-small;
+  color: map-get($clrs, grey);
+  text-decoration: none;
+  &:hover {
+    background: map-get($clrs, grey-hover);
+  }
+}
+
+.navigation__link--active {
+  font-family: $font-family-semibold;
+  background: map-get($clrs, orange-light);
+  color: map-get($clrs, white);
+  &:hover {
+    background: map-get($clrs, orange-light);
+  }
+}

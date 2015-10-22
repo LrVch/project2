@@ -139,7 +139,7 @@ body {
   background: #fff;
 }
 
-.page-header__inner, .page-footer__inner {
+.page-header__inner, .page-footer__inner, .navigation__inner {
   width: 1100px;
   margin: 0 auto;
   position: relative;
@@ -213,7 +213,7 @@ footer {
 .page-heder__bottom {
   background: #f4f4f4;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 }
 
 .page-heder__logo-wrapper,
@@ -410,4 +410,42 @@ footer {
   line-height: 17px;
   color: #333333;
   text-decoration: none;
+}
+
+.navigation {
+  font-size: 0;
+  border-bottom: 2px solid #dee1e4;
+  background: #fff;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navigation__link {
+  display: block;
+  padding: 17px 16px 17px 15px;
+  font-family: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #333333;
+  text-decoration: none;
+}
+.navigation__link:hover {
+  background: #e4e2e2;
+}
+
+.navigation__link--active {
+  font-family: "open_sanssemibold", Arial, Helvetica, Garuda, sans-serif;
+  background: #ff6e35;
+  color: #fff;
+}
+.navigation__link--active:hover {
+  background: #ff6e35;
 }

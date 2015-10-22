@@ -11,11 +11,11 @@ mixin socials(className, items)
 //- +nav('navigation', ['Главная', 'Новости', "О компании", "Сравнение"], 2)
 mixin nav(className, items, activeIndx)
   nav(class= className)  
-    .container
+    div(class= className + "__inner")
       ul(class= className + "__list")
         each item, index in items
-          li(class=className + "__item " + ((activeIndx == indx) ? className + '__item' + '--active' : ''))
-            a(href="#" class= className + "__link")= item
+          li(class=className + "__item")
+            a(href="#" class= className + "__link " + ((activeIndx == index) ? className + '__link' + '--active' : ''))= item
      
 // простой список с сылками     
 mixin links(className, links)
