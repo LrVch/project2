@@ -1,0 +1,48 @@
+.contacts {
+  //background: #f00;
+  padding-left: 30px;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__item {
+  position: relative;
+  display: inline-block;
+  margin-left: 106px;
+  list-style-type: none;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+$icon-height: 26px;
+.contacts__item--address {
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  color: map-get($clrs, grey);
+  line-height: $icon-height;
+}
+
+.contacts__item--tel {
+  font-family: $font-family-semibold;
+  font-size: $font-size-regular;
+  color: map-get($clrs, grey);
+  line-height: $icon-height;
+}
+
+$contacts: address,tel;
+$contacts-map: sprite-map('icons/contacts/*.png', $spacing: 70px, $layout: vertical);
+@each $contact in $contacts {
+  .contacts__item--#{$contact}:before {
+    @include get-sprite($contacts-map, $contact);
+  }
+}

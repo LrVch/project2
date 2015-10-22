@@ -1,0 +1,31 @@
+.search {
+  font-size: 0;
+} 
+.search__form {
+  
+}
+.search__input {
+  display: inline-block; 
+}
+.search__search {
+  width: 255px;
+  box-sizing: border-box;
+  padding: 6px 15px;
+  border: 1px solid map-get($clrs, grey-border);
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-family: $font-family-light;
+  font-size: $font-base-size;
+  color: map-get($clrs, grey-lighten); 
+}
+.search__submit {
+  padding: 5px 14px 5px 15px;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-family: $font-family-semibold;
+  font-size: $font-size-regular-small;
+  color: map-get($clrs, white);
+  background: map-get($clrs, orange);
+}

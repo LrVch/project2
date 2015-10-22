@@ -1,4 +1,4 @@
-$container-width: 960px;
+$container-width: 1100px;
 $hedaer-width: 1200px;
 $footer-padding-top: 10px;
 $footer-padding-bottom: 20px;
@@ -16,13 +16,14 @@ body {
   font-size: $font-base-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fff;
 }
 
 %container {
   width: $container-width;
   margin: 0 auto;
   position: relative;
-  //padding: 0 10px;
+  padding: 0 10px;
 }
 
 .wrapper { 
@@ -32,7 +33,6 @@ body {
   height: 100%;
   overflow: hidden;
   min-width: $container-width + 20;
-  background: #f00;
   &:after {
     display: block;
     position: relative;

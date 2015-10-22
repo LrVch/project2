@@ -1,5 +1,17 @@
 header.page-header 
-  .page-header__inner
-    | header
-    //- социальные иконки 
-    //- -+socials('socials', {vk:'в контакте', fb:'фэйсбук', tw:'твиттер'})
+  .page-header__top
+    .page-header__inner
+      .row
+        .page-header__socials-wrapper
+          include _socials
+        .page-header__contacts-wrapper
+          include _contacts
+  .page-heder__bottom
+    .page-header__inner
+      .row
+        .page-heder__logo-wrapper
+          include _logo
+        .page-heder__search-wrapper
+          include _search
+        .page-heder__links-wrapper
+          include _links

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- простой список с сылками     --><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -9,7 +10,7 @@
 		<meta name="author" content="">
 		<!-- build:css css/vendor.min.css -->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-		<!-- endbuild -->
+		<!-- endbuild  -->
 		<!-- build:css css/style.min.css -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<!-- endbuild -->
@@ -17,20 +18,76 @@
 		<!-- build:js js/modernizr.min.js  -->
 		<script src="bower/modernizr/modernizr.js"></script>
 		<!-- endbuild -->
-		<title> Main page </title>
+		<title> Main page</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<div class="maincontent">
 				<header class="page-header"> 
-					<div class="page-header__inner">header
+					<div class="page-header__top">
+						<div class="page-header__inner">
+							<div class="row">
+								<div class="page-header__socials-wrapper">
+									<div class="socials">  
+										<ul class="socials__list">
+											<li class="socials__item"><a href="#" title="фэйсбук" class="socials__link socials__link--fb">фэйсбук</a></li>
+											<li class="socials__item"><a href="#" title="в контакте" class="socials__link socials__link--vk">в контакте</a></li>
+											<li class="socials__item"><a href="#" title="твиттер" class="socials__link socials__link--tw">твиттер</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="page-header__contacts-wrapper">
+									<div class="contacts">
+										<ul class="contacts__list">
+											<li class="contacts__item contacts__item--address">ул. Маяковская 6, офис 17</li>
+											<li class="contacts__item contacts__item--tel">+7 (921) 123-12-13</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-heder__bottom">
+						<div class="page-header__inner">
+							<div class="row">
+								<div class="page-heder__logo-wrapper">
+									<div class="logo"><a href="#" class="logo__link"><img src="img/logo--orange.png" class="logo__img"></a></div>
+								</div>
+								<div class="page-heder__search-wrapper">
+									<div class="search">
+										<form action="#" method="GET" class="search__form">
+											<input type="search" placeholder="Что будем искать" class="search__input search__search">
+											<input type="submit" value="Найти" class="search__input search__submit">
+										</form>
+									</div>
+								</div>
+								<div class="page-heder__links-wrapper">
+									<div class="links">
+										<ul class="links__list">
+											<li class="links__item"><a href="#" class="links__link">Карта проезда</a></li>
+											<li class="links__item"><a href="#" class="links__link">История заказов</a></li>
+											<li class="links__item"><a href="#" class="links__link">Корзина</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</header>
+				<nav class="nav"></nav>
 				<div class="content">
-					<div class="content__inner">
-						 
-						content
+					<div class="breadcrumbs"></div>
+					<div class="title"> </div>
+					<div class="row">
+						<div class="small-col">
+							<aside class="filter"></aside>
+						</div>
+						<div class="big-col">
+							<div class="goods"></div>
+							<div class="paginator"></div>
+						</div>
 					</div>
+					<div class="info"></div>
 				</div>
 			</div>
 		</div>

@@ -12,7 +12,7 @@ html
  
     // build:css css/vendor.min.css 
     link(rel="stylesheet" href="bower/normalize-css/normalize.css")
-    // endbuild 
+    // endbuild  
 
     // build:css css/style.min.css 
     link(rel="stylesheet" type='text/css' href="css/style.css")
@@ -30,11 +30,11 @@ html
   body
     .wrapper
       .maincontent
-        include ../_blocks/_header
-        block content
-        
-        
-        
+        include ../_blocks/_header   
+        include ../_blocks/_nav
+        .content
+          block content
+          
     include ../_blocks/_footer
     
     

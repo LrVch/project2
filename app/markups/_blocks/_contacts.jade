@@ -1,0 +1,5 @@
+.contacts
+  - var items= {address:'ул. Маяковская 6, офис 17', tel:'+7 (921) 123-12-13'}
+      ul.contacts__list
+        each item, index in items
+          li(class= "contacts__item contacts__item--" + index)= item

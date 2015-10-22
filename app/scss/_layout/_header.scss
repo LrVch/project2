@@ -1,3 +1,41 @@
 .page-header {
-  
+  background: #fff;
+} 
+.page-header__inner {
+  @extend %container;
+}
+.page-header__top {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid map-get($clrs, grey-border);
+}
+.page-header__socials-wrapper {
+  float: left;
+  width: 300px;
+}
+.page-header__contacts-wrapper {
+  float: right;
+  width: 474px;
+}
+.page-heder__bottom {
+  background: map-get($clrs, grey-light);
+  padding-top: 30px;
+  padding-bottom: 30px;;
+}
+.page-heder__logo-wrapper,
+.page-heder__search-wrapper,
+.page-heder__links-wrapper {
+  float: left;
+}
+.page-heder__logo-wrapper {
+  width: 295px;
+}
+.page-heder__search-wrapper {
+  width: 367px;
+}
+.page-heder__links-wrapper {
+  box-sizing: border-box;
+  width: 438px;
+  padding-left: 49px;
+  padding-top: 7px;
 }
