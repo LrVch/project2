@@ -674,3 +674,60 @@ footer {
 .main-filter__inner-radio:disabled ~ .main-filter__inner-labelradio:after {
   display: none;
 }
+
+.main-filter__inner-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.main-filter__inner-checkbox:checked ~ .main-filter__inner-labelcheck:after {
+  position: absolute;
+  content: "";
+  left: 3px;
+  top: 4px;
+}
+.main-filter__inner-checkbox:checked ~ .main-filter__inner-labelcheck--hot:after {
+  position: absolute;
+  content: "";
+  left: 3px;
+  top: 4px;
+}
+
+.main-filter__inner-labelcheck {
+  position: relative;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.main-filter__inner-labelcheck:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+  background: #dbdbdb;
+}
+
+.main-filter__inner-labelcheck--hot:before {
+  background: #ff6600;
+}
+
+.main-filter__inner-reset {
+  font-family: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #5db2fc;
+}
+
+.main-filter__inner-labelcheck:after {
+  background: url('../img/icons/check-s215f20a7bf.png') 0 -80px no-repeat;
+  height: 10px;
+  width: 13px;
+}
+
+.main-filter__inner-labelcheck--hot:after {
+  background: url('../img/icons/check-s215f20a7bf.png') 0 0 no-repeat;
+  height: 10px;
+  width: 13px;
+}

@@ -7,6 +7,7 @@ var mainFilter = (function () {
 
   function _setUpListners() {
     $('.main-filter__trigger').on('click', _toggleFilter);
+    $(".main-filter__inner-reset").on('click', _reset);
   };
 
   function _modules() {
@@ -45,6 +46,15 @@ var mainFilter = (function () {
     }*/
   };
 
+  function _reset(e) {
+    e.preventDefault();
+
+    var
+      $this = $(this),
+      list = $this.closest(".main-filter__inner"),
+      checkBoxs = list.find('input[type="checkbox"]');
+    checkBoxs.removeAttr("checked");
+  }
   return {
     init: init
   };

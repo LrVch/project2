@@ -138,3 +138,70 @@
     }
   }
 }
+
+.main-filter__inner-checkbox {
+  position: absolute;
+  left: -9999px;
+  &:checked ~ .main-filter__inner-labelcheck {
+    &:after {
+      position: absolute;
+      content: "";
+      //width: 20px;
+      //height: 20px;
+      //background: #f00;
+      left: 3px;
+      top: 4px;
+    }
+  }
+  &:checked ~ .main-filter__inner-labelcheck--hot {
+    &:after {
+      position: absolute;
+      content: "";
+      //width: 20px;
+      //height: 20px;
+      //background: #00f;
+      left: 3px;
+      top: 4px;
+    }
+  }
+}
+
+.main-filter__inner-labelcheck {
+  position: relative;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+    background: darken(map-get($clrs, grey-light), 10%);
+  }
+}
+
+.main-filter__inner-labelcheck--hot {
+  &:before {
+    background: (map-get($clrs, orange));
+  }
+}
+
+.main-filter__inner-reset {
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  line-height: $font-base-size;
+  color: map-get($clrs, blue);
+}
+
+//// генерация спрайтов
+$cheks: labelcheck,
+labelcheck--hot;
+$cheks-map: sprite-map('icons/check/*.png', $spacing: 70px, $layout: vertical);
+@each $check in $cheks {
+  .main-filter__inner-#{$check}:after {
+    @include get-sprite($cheks-map, $check);
+  }
+}

@@ -36,10 +36,10 @@
                       name= name 
                       id= name.replace( / /g, "-" ) 
                       checked= ((index == pointCheck-1 || index >= rangeCheck[0]-1 && index <= rangeCheck[1]-1) ? true: false) 
-                      class="main-filter__inner-checkbox " + ((index == pointHot-1 || index >= rangeHot[0]-1 && index <= rangeHot[1]-1) ? "main-filter__inner-checkbox--hot": "")
+                      class="main-filter__inner-checkbox"
                     )
                     label(
-                      class="main-filter__inner-label"
+                      class="main-filter__inner-labelcheck " + ((index == pointHot-1 || index >= rangeHot[0]-1 && index <= rangeHot[1]-1) ? "main-filter__inner-labelcheck--hot": "")
                       for= name.replace( / /g, "-" ))= name
               - else
                   li.main-filter__inner-item
@@ -82,7 +82,7 @@
                       class="main-filter__inner-checkbox " + ((index == pointHot-1 || index >= rangeHot[0]-1 && index <= rangeHot[1]-1) ? "main-filter__inner-checkbox--hot": "")
                     )
                     label(
-                      class="main-filter__inner-label"
+                      class="main-filter__inner-labelcheck " + ((index == pointHot-1 || index >= rangeHot[0]-1 && index <= rangeHot[1]-1) ? "main-filter__inner-labelcheck--hot": "")
                       for= name.replace( / /g, "-" ))= name
               - else
                   li.main-filter__inner-item
