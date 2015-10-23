@@ -1,6 +1,4 @@
-
-<!-- простой список с сылками-->
-<!-- breadcrumbs--><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -52,7 +50,7 @@
 						<div class="page-header__inner">
 							<div class="row">
 								<div class="page-heder__logo-wrapper">
-									<div class="logo"><a href="#" class="logo__link"><img src="img/logo--orange.png" class="logo__img"></a></div>
+									<div class="logo"><a href="#" class="logo__link"><img src="img/logo--orange.png" alt="cooltech" class="logo__img"></a></div>
 								</div>
 								<div class="page-heder__search-wrapper">
 									<div class="search">
@@ -99,10 +97,102 @@
 						<h1 class="title-main">Мобильные телефоны</h1>
 						<div class="row">
 							<div class="small-col">
-								<aside class="filter"></aside>
+								<aside class="filter">
+									<div class="filter__cost-wrapper">
+										<div class="filter-cost">
+											<ul class="filter-cost__list">
+												<li class="filter-cost__item"><a href="#" class="filter-cost__link ">Флагманы</a></li>
+												<li class="filter-cost__item"><a href="#" class="filter-cost__link filter-cost__link--active">Бюджетная линейка</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="filter__main-filter-wrapper">
+										<!-- фильрт товаров-->
+										<div class="main-filter">
+											<ul class="main-filter__list">
+												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Наличие в магазинах</a>
+													<ul class="main-filter__inner">
+														<li class="main-filter__inner-item"> 
+															<input type="radio" name="shop" id="all" checked class="main-filter__inner-radio">
+															<label for="all" class="main-filter__inner-labelradio">Во всех магазинах</label>
+														</li>
+														<li class="main-filter__inner-item"> 
+															<input type="radio" name="shop" id="nearest" disabled class="main-filter__inner-radio">
+															<label for="nearest" class="main-filter__inner-labelradio">В ближайшем ко мне магазине</label>
+														</li>
+													</ul>
+												</li>
+												<li class="main-filter__item"><a href="#" class="main-filter__trigger">  Бренды</a>
+													<ul class="main-filter__inner">
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Lenovo" id="Lenovo" checked class="main-filter__inner-checkbox main-filter__inner-checkbox--hot">
+															<label for="Lenovo" class="main-filter__inner-label">Lenovo</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Apple" id="Apple" checked class="main-filter__inner-checkbox main-filter__inner-checkbox--hot">
+															<label for="Apple" class="main-filter__inner-label">Apple</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Samsung" id="Samsung" checked class="main-filter__inner-checkbox main-filter__inner-checkbox--hot">
+															<label for="Samsung" class="main-filter__inner-label">Samsung</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Asus" id="Asus" checked class="main-filter__inner-checkbox ">
+															<label for="Asus" class="main-filter__inner-label">Asus</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Motorola" id="Motorola" class="main-filter__inner-checkbox ">
+															<label for="Motorola" class="main-filter__inner-label">Motorola</label>
+														</li>
+														<li class="main-filter__inner-item"><a href="#" class="main-filter__inner-reset">Сбросить фильтр</a></li>
+													</ul>
+												</li>
+												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Цена</a>
+													<ul class="main-filter__inner">
+														<li class="main-filter__inner-item">
+															<div class="slider">slider</div>
+														</li>
+													</ul>
+												</li>
+												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Цвет</a>
+													<ul class="main-filter__inner">
+														<li class="main-filter__inner-item">
+															<div class="color">color</div>
+														</li>
+													</ul>
+												</li>
+												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Операционные системы</a>
+													<ul class="main-filter__inner">
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Android" id="Android" checked class="main-filter__inner-checkbox main-filter__inner-checkbox--hot">
+															<label for="Android" class="main-filter__inner-label">Android</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="iOS" id="iOS" checked class="main-filter__inner-checkbox main-filter__inner-checkbox--hot">
+															<label for="iOS" class="main-filter__inner-label">iOS</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Windows Mobile" id="Windows-Mobile" checked class="main-filter__inner-checkbox main-filter__inner-checkbox--hot">
+															<label for="Windows-Mobile" class="main-filter__inner-label">Windows Mobile</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Symbian" id="Symbian" checked class="main-filter__inner-checkbox ">
+															<label for="Symbian" class="main-filter__inner-label">Symbian</label>
+														</li>
+														<li class="main-filter__inner-item">
+															<input type="checkbox" name="Custom" id="Custom" class="main-filter__inner-checkbox ">
+															<label for="Custom" class="main-filter__inner-label">Custom</label>
+														</li>
+														<li class="main-filter__inner-item"><a href="#" class="main-filter__inner-reset">Сбросить фильтр</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</aside>
 							</div>
 							<div class="big-col">
-								<div class="goods"></div>
+								<div class="goods">right col</div>
 								<div class="paginator"> </div>
 							</div>
 						</div>
@@ -111,14 +201,14 @@
 				</div>
 			</div>
 		</div>
-		<footer class="page-footer"> 
-			<div class="page-footer__inner">footer</div>
-		</footer>
+		<!--include ../_blocks/_footer-->
+		
 		<!-- build:js js/vendor.min.js -->
 		<script src="bower/jquery/dist/jquery.js"></script>
 		<!-- endbuild -->
 		<!-- build:js js/script.min.js -->
 		<script src="js/script.js"></script>
+		<script src="js/main-filter.js"></script>
 		<!-- endbuild -->
 	</body>
 </html>

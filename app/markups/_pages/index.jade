@@ -10,7 +10,13 @@ block content
   .row
     .small-col
       aside.filter
+        .filter__cost-wrapper
+          include ../_blocks/_filter-cost 
+        .filter__main-filter-wrapper
+          include ../_blocks/_main-filter
+        
     .big-col
       .goods
+        | right col
       .paginator 
   .info

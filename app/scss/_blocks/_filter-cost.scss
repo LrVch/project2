@@ -1,0 +1,38 @@
+.filter-cost {
+  border: 1px solid map-get($clrs, grey-border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.filter-cost__list {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-cost__item {
+  border-top: 1px solid map-get($clrs, grey-border);
+  list-style-type: none;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.filter-cost__link {
+  display: block;
+  padding: 13px 28px;
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  color: map-get($clrs, grey-lighten);
+  text-decoration: none;
+  background: map-get($clrs, white-dark);
+  &:hover {
+    background: darken(map-get($clrs, white-dark), 1%);
+  }
+}
+
+.filter-cost__link--active {
+  background: map-get($clrs, blue-light);
+  &:hover {
+    background: map-get($clrs, blue-light);
+  }
+}

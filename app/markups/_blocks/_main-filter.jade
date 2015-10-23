@@ -1,0 +1,90 @@
+// фильрт товаров
+.main-filter
+  ul.main-filter__list
+  
+    li.main-filter__item
+      a(href="#").main-filter__trigger  Наличие в магазинах
+      ul.main-filter__inner
+        //- генерация радио 
+        - var radio= {all:"Во всех магазинах", nearest:"В ближайшем ко мне магазине"}
+        - var check= "all"
+        - var dis = "nearest"
+          each shop, id in radio
+            li.main-filter__inner-item 
+              input(class="main-filter__inner-radio" type="radio" name="shop" id= id checked= ((id == check) ? true : false) disabled= ((id == dis) ? true : false))
+              label(for=id class="main-filter__inner-labelradio")= shop
+        //- END генерация радио
+         
+    li.main-filter__item
+      a(href="#").main-filter__trigger   Бренды
+      ul.main-filter__inner
+        //- генерация чекбоксов
+        - var checkboks= ["Lenovo", "Apple", "Samsung", "Asus", "Motorola", "Сбросить фильтр"]
+        //- диапазона начинается с 1 и равен длине массива 
+        - var rangeCheck = [1,4]
+        //- выбор одного чекбокса
+        - var pointCheck = 0 
+        //- диапазона начинается с 1 и равен длине массива 
+        - var rangeHot = [1,3]
+        //- выбор одного чекбокса для оранжевого цвета
+        - var pointHot = 0
+            each name, index in checkboks
+              - if (index != checkboks.length - 1)
+                  li.main-filter__inner-item
+                    input(
+                      type="checkbox" 
+                      name= name 
+                      id= name.replace( / /g, "-" ) 
+                      checked= ((index == pointCheck-1 || index >= rangeCheck[0]-1 && index <= rangeCheck[1]-1) ? true: false) 
+                      class="main-filter__inner-checkbox " + ((index == pointHot-1 || index >= rangeHot[0]-1 && index <= rangeHot[1]-1) ? "main-filter__inner-checkbox--hot": "")
+                    )
+                    label(
+                      class="main-filter__inner-label"
+                      for= name.replace( / /g, "-" ))= name
+              - else
+                  li.main-filter__inner-item
+                    a(href="#").main-filter__inner-reset= name
+        //- END генерация чекбоксов
+          
+    li.main-filter__item
+      a(href="#").main-filter__trigger  Цена
+      ul.main-filter__inner
+        li.main-filter__inner-item
+          .slider slider
+      
+    li.main-filter__item
+      a(href="#").main-filter__trigger  Цвет
+      ul.main-filter__inner
+          li.main-filter__inner-item
+            .color color
+      
+    li.main-filter__item
+      a(href="#").main-filter__trigger  Операционные системы
+      ul.main-filter__inner
+        //- генерация чекбоксов
+        - var checkboks= ["Android", "iOS", "Windows Mobile", "Symbian", "Custom", "Сбросить фильтр"]
+        //- диапазона начинается с 1 и равен длине массива 
+        - var rangeCheck = [1,4]
+        //- выбор одного чекбокса
+        - var pointCheck = 0 
+        //- диапазона начинается с 1 и равен длине массива 
+        - var rangeHot = [1,3]
+        //- выбор одного чекбокса для оранжевого цвета
+        - var pointHot = 0
+            each name, index in checkboks
+              - if (index != checkboks.length - 1)
+                  li.main-filter__inner-item
+                    input(
+                      type="checkbox" 
+                      name= name 
+                      id= name.replace( / /g, "-" ) 
+                      checked= ((index == pointCheck-1 || index >= rangeCheck[0]-1 && index <= rangeCheck[1]-1) ? true: false) 
+                      class="main-filter__inner-checkbox " + ((index == pointHot-1 || index >= rangeHot[0]-1 && index <= rangeHot[1]-1) ? "main-filter__inner-checkbox--hot": "")
+                    )
+                    label(
+                      class="main-filter__inner-label"
+                      for= name.replace( / /g, "-" ))= name
+              - else
+                  li.main-filter__inner-item
+                    a(href="#").main-filter__inner-reset= name
+        //- END генерация чекбоксов  

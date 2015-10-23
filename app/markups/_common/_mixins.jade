@@ -9,16 +9,16 @@ mixin socials(className, items)
            
 //- навигация
 //- +nav('navigation', ['Главная', 'Новости', "О компании", "Сравнение"], 2)
-mixin nav(className, items, activeIndx)
+mixin nav(className, items, activeIndex)
   nav(class= className)  
     div(class= className + "__inner")
       ul(class= className + "__list")
         each item, index in items
           li(class=className + "__item")
-            a(href="#" class= className + "__link " + ((activeIndx == index) ? className + '__link' + '--active' : ''))= item
+            a(href="#" class= className + "__link " + ((activeIndex == index) ? className + '__link' + '--active' : ''))= item
      
-// простой список с сылками
-//- +v('links', ['Главная', 'Новости', "О компании", "Сравнение"])
+//- простой список с сылками
+//- +links('links', ['Главная', 'Новости', "О компании", "Сравнение"])
 mixin links(className, links)
   div(class= className)
     ul(class= className + "__list")
@@ -26,7 +26,16 @@ mixin links(className, links)
         li(class= className + "__item")
           a(href="#" class= className + "__link")= link  
           
-// breadcrumbs
+//- простой список с сылками и активным пунктом
+//- +inksActive('links', ['Главная', 'Новости', "О компании", "Сравнение"], 1)
+mixin linksActive(className, links, activeIndex)
+  div(class= className)
+    ul(class= className + "__list")
+      each link, index in links
+        li(class= className + "__item")
+          a(href="#" class= className + "__link " + ((activeIndex == index) ? className + '__link' + '--active' : ''))= link 
+          
+//- breadcrumbs с разделителем ">"
 //- +breadcrumbs('breadcrumbs', ['Главная', 'Новости', "О компании"], 2)
 mixin breadcrumbs(className, items, activeIndx)
   div(class= className)  
