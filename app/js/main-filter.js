@@ -52,7 +52,7 @@ var mainFilter = (function () {
     var
       $this = $(this),
       list = $this.closest(".main-filter__inner"),
-      checkBoxs = list.find('input[type="checkbox"]');
+      checkBoxs = list.find('input[type="checkbox"]').not('input[type="checkbox"]:disabled');
     checkBoxs.removeAttr("checked");
   }
   return {

@@ -685,15 +685,11 @@ footer {
   left: 3px;
   top: 4px;
 }
-.main-filter__inner-checkbox:checked ~ .main-filter__inner-labelcheck--hot:after {
-  position: absolute;
-  content: "";
-  left: 3px;
-  top: 4px;
+.main-filter__inner-checkbox:disabled ~ .main-filter__inner-labelcheck--disabled:before {
+  background: #dbdbdb;
 }
 
 .main-filter__inner-labelcheck {
-  position: relative;
   position: relative;
   padding-left: 30px;
   cursor: pointer;
@@ -706,10 +702,6 @@ footer {
   left: 0;
   top: 0;
   border-radius: 3px;
-  background: #dbdbdb;
-}
-
-.main-filter__inner-labelcheck--hot:before {
   background: #ff6600;
 }
 
@@ -721,13 +713,13 @@ footer {
 }
 
 .main-filter__inner-labelcheck:after {
-  background: url('../img/icons/check-s215f20a7bf.png') 0 -80px no-repeat;
+  background: url('../img/icons/check-s0d3b8d3f74.png') 0 -80px no-repeat;
   height: 10px;
   width: 13px;
 }
 
-.main-filter__inner-labelcheck--hot:after {
-  background: url('../img/icons/check-s215f20a7bf.png') 0 0 no-repeat;
+.main-filter__inner-labelcheck--disabled:after {
+  background: url('../img/icons/check-s0d3b8d3f74.png') 0 0 no-repeat;
   height: 10px;
   width: 13px;
 }
