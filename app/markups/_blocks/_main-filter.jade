@@ -51,7 +51,15 @@
       a(href="#").main-filter__trigger  Цена
       ul.main-filter__inner
         li.main-filter__inner-item
-          .slider slider
+          .slider
+            .slider__inner
+              .slider__input-wrapper.slider__input-wrapper-min
+                span.slider__pre от
+                input.slider__input#min(type="text" name="min")
+              .slider__input-wrapper.slider__input-wrapper-max
+                span.slider__pre до
+                input.slider__input#max(type="text" name="max")  
+            .slider__slide#slider  
       
     li.main-filter__item
       a(href="#").main-filter__trigger  Цвет
