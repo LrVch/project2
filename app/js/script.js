@@ -1,1 +1,5 @@
-$('#info-block').columnize({width: 535});
+(function () {
+  $('#info-block').columnize({
+    width: 535
+  });
+})();

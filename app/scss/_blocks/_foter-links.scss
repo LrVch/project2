@@ -1,0 +1,29 @@
+.foter-links{
+  
+}
+$foter-linksMargin: 18px;
+.foter-links__list{
+  @extend %clearfix;
+  margin: 0;
+  padding: 0;
+  padding-left: 161px;
+  margin-bottom: -$foter-linksMargin;
+}
+.foter-links__item{
+  list-style-type: none;
+  float: right;
+  margin-left: 28px;
+  margin-bottom: $foter-linksMargin;
+  &:firs-child {
+    margin-left: 0;
+  }
+  &:nth-child(3) {
+    margin-left: 100px;
+  }
+}
+.foter-links__link{
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  color: map-get($clrs, white);
+}
+ 

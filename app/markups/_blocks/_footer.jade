@@ -1,4 +1,15 @@
 footer.page-footer 
   .page-footer__inner
-    | footer
- 
+    .row
+      .small-col
+        .page-footer__logo-wrapper
+          - var footer= true, header= false
+            include _logo
+      .big-col
+        .row
+          .page-footer__social-wrapper
+            include _socials-big
+        .page-footer__foter-links-wrapper    
+          include _foter-links
+  include _copy
+    

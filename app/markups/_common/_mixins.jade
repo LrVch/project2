@@ -35,15 +35,27 @@ mixin linksActive(className, links, activeIndex)
         li(class= className + "__item")
           a(href="#" class= className + "__link " + ((activeIndex == index) ? className + '__link' + '--active' : ''))= link 
           
-//- breadcrumbs с разделителем ">"
-//- +breadcrumbs('breadcrumbs', ['Главная', 'Новости', "О компании"], 2)
-mixin breadcrumbs(className, items, activeIndx)
+//- breadcrumbs с разделителем ">" и поледний пункт ссылка
+//- +breadcrumbsA('breadcrumbs', ['Главная', 'Новости', "О компании"], 2)
+mixin breadcrumbsA(className, items, activeIndx)
   div(class= className)  
     ul(class= className + "__list")
       each item, index in items
         li(class=className + "__item")
-          a(href="#" class= className + "__link " + ((items.length == index + 1) ? className + '__link' + '--active' : ''))= (items.length == index + 1) ? item : item + " >" 
-          
+          a(href="#" class= className + "__link " + ((items.length == index + 1) ? className + '__link' + '--active' : ''))= (items.length == index + 1) ? item : item + " >"
+//- breadcrumbs с разделителем ">" и поледний пункт спан      
+mixin breadcrumbs(className, items, activeIndx)
+  div(class= className)  
+    ul(class= className + "__list")
+      each item, index in items
+        - if (index != items.length - 1)
+            li(class= className + "__item")
+              a(href="#" class= className + "__link")= (items.length == index + 1) ? item : item + " >" 
+        - else       
+            li(class= className + "__item")
+              span(href="#" class= className + "__link " + className + '__link' + '--active')= item
+              
+              
 //- +form()
 //- +form('form', '#', 'post', {textarea:{"fds": "desc"}, input:{submit:"submit"}} )    
 mixin form(className, action, method, inputs)

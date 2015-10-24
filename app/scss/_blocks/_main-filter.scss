@@ -195,7 +195,7 @@
 //// генерация спрайтов
 $cheks: labelcheck,
 labelcheck--disabled;
-$cheks-map: sprite-map('icons/check/*.png', $spacing: 70px, $layout: vertical);
+$cheks-map: sprite-map('check/*.png', $spacing: 70px, $layout: vertical);
 @each $check in $cheks {
   .main-filter__inner-#{$check}:after {
     @include get-sprite($cheks-map, $check);

@@ -1,5 +1,6 @@
 .info {
   padding-top: 26px;
+  padding-bottom: 44px;
 }
 .info__title{
   margin: 0;
@@ -13,6 +14,7 @@
 $columnMargin: 36px;
 .info__block{
   margin-left: -$columnMargin;
+  margin-bottom: -$columnMargin;
 }
 .info__coll{
   margin-left: $columnMargin;

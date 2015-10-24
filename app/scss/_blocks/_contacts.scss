@@ -40,7 +40,7 @@ $icon-height: 26px;
 }
 
 $contacts: address,tel;
-$contacts-map: sprite-map('icons/contacts/*.png', $spacing: 70px, $layout: vertical);
+$contacts-map: sprite-map('contacts/*.png', $spacing: 70px, $layout: vertical);
 @each $contact in $contacts {
   .contacts__item--#{$contact}:before {
     @include get-sprite($contacts-map, $contact);

@@ -1,0 +1,40 @@
+.socials {
+  font-size: 0;
+}
+.socials-big__list { 
+  margin: 0;
+  padding: 0;
+}
+.socials-big__item {
+  display: inline-block;
+  margin-left: 27px;
+  list-style-type: none;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.socials-big__link {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  text-indent: -9999px;
+}
+   
+$socials-big: (vk: vk--hover, tw: tw--hover, fb: fb--hover);
+$socials-big-map: sprite-map('big-social/*.png', $spacing: 70px, $layout: vertical);
+@each $social, $hover in $socials-big {
+  .socials-big__link--#{$social} {
+    @include get-sprite($socials-big-map, $social);
+  }
+  .socials-big__link--#{$social}:hover {
+    @include get-sprite($socials-big-map, $hover);
+  }
+  
+} 
+//$socials-big: vk--hover, tw--hover, fb--hover;
+//$socials-big-map: sprite-map('icons/big-social/*.png', $spacing: 70px, $layout: vertical);
+//@each $social in $socials-big {
+//  .socials-big__link--#{$social}:hover {
+//    @include get-sprite($socials-big-map, $social);
+//  }
+//}

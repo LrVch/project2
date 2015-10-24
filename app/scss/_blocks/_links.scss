@@ -1,22 +1,31 @@
 .links {
   font-size: 0;
 }
+
 .links__list {
   margin: 0;
   padding: 0;
 }
+
 .links__item {
   display: inline-block;
   margin-left: 33px;
   list-style-type: none;
   &:first-child {
     margin-left: 0;
+    //a {
+    //  color: map-get($clrs, orange);
+    //  border-bottom: 1px solid map-get($clrs, orange);
+    //}
+  }
+  &:hover {
     a {
       color: map-get($clrs, orange);
       border-bottom: 1px solid map-get($clrs, orange);
     }
   }
 }
+
 .links__link {
   display: block;
   border-bottom: 1px solid map-get($clrs, grey);

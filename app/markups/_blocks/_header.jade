@@ -10,7 +10,8 @@ header.page-header
     .page-header__inner
       .row
         .page-heder__logo-wrapper
-          include _logo
+          - var header= true, footer= false
+              include _logo
         .page-heder__search-wrapper
           include _search
         .page-heder__links-wrapper

@@ -1,12 +1,12 @@
 $container-width: 1100px;
 $hedaer-width: 1200px;
-$footer-padding-top: 10px;
-$footer-padding-bottom: 20px;
-$footer-height: 50px;
+$footer-padding-top: 35px;
+$footer-padding-bottom: 0px;
+$footer-height: 220;
 html {
   width: 100%;
   height: 100%;
-  font-size: 100.01%;
+  //font-size: 100.01%;
 }
 
 body {
@@ -49,10 +49,11 @@ body {
 
 footer {
   position: relative;
-  margin-top: -$footer-height;
+  //margin-top: -$footer-height;
   height: $footer-height - $footer-padding-top - $footer-padding-bottom;
   padding-top: $footer-padding-top;
   padding-bottom: $footer-padding-bottom;
+  background: rgba(0,0,0,.3);
 }
 
 %debug {

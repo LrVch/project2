@@ -1,6 +1,16 @@
 .page-footer {
-  
-}
+  background: url("../img/bg-footer.jpg") repeat-x;
+} 
 .page-footer__inner {
   @extend %container;
+}
+.page-footer__logo-wrapper {
+  padding-top: 37px;
+}
+.page-footer__social-wrapper{
+  float: right;
+  margin-bottom: 30px;
+}
+.page-footer__foter-links-wrapper {
+  margin-bottom: 28px;
 }

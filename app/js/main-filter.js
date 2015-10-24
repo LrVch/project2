@@ -29,10 +29,10 @@ var mainFilter = (function () {
 
     if ($this.hasClass("main-filter__trigger--closed")) {
       $this.removeClass("main-filter__trigger--closed");
-      content.slideDown(duration);
+      content.stop(true,true).slideDown(duration)
     } else {
       $this.addClass("main-filter__trigger--closed");
-      content.slideUp(duration);
+      content.stop(true,true).slideUp(duration)
     }
 
     /*if (!$this.hasClass("main-filter__trigger--closed")) {
