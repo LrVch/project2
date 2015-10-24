@@ -171,20 +171,19 @@
 
 .main-filter__inner-labelcheck {
   position: relative;
-  padding-left: 30px; 
+  padding-left: 30px;
   cursor: pointer;
   &:before {
     position: absolute;
     content: "";
     width: 20px;
     height: 20px;
-    left: 0; 
+    left: 0;
     top: 0;
     border-radius: 3px;
-    background: (map-get($clrs, orange));
+    background: map-get($clrs, orange);
   }
 }
-
 
 .main-filter__inner-reset {
   font-family: $font-family-regular;
@@ -194,10 +193,59 @@
 }
 
 //// генерация спрайтов
-$cheks: labelcheck, labelcheck--disabled;
+$cheks: labelcheck,
+labelcheck--disabled;
 $cheks-map: sprite-map('icons/check/*.png', $spacing: 70px, $layout: vertical);
 @each $check in $cheks {
   .main-filter__inner-#{$check}:after {
     @include get-sprite($cheks-map, $check);
+  }
+}
+
+.main-filter__color-list {
+  margin: 0;
+  padding: 0;
+  margin-left: -22px;
+  margin-bottom: -22px;
+}
+
+.main-filter__color-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+.main-filter__color-link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid map-get($clrs, grey-border);
+  &:hover {
+    box-shadow: 0 0 1px 2px map-get($clrs, orange);
+  }
+}
+
+// генерация цветов
+$colors: 
+map-get($clrs, white),
+map-get($clrs, orange),
+map-get($clrs, grey-choice),
+map-get($clrs, black),
+map-get($clrs, blue-dark),
+map-get($clrs, red),
+map-get($clrs, yellow),
+map-get($clrs, orange-lighten),
+map-get($clrs, green),
+map-get($clrs, blue-lighten),
+map-get($clrs, violet),
+map-get($clrs, brown);
+$countColor: 0;
+@each $color in $colors {
+  $countColor: $countColor + 1;
+  .main-filter__color-item:nth-child(#{$countColor}) {
+    .main-filter__color-link {
+      background: $color;
+    }
   }
 }

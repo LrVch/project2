@@ -723,3 +723,75 @@ footer {
   height: 10px;
   width: 13px;
 }
+
+.main-filter__color-list {
+  margin: 0;
+  padding: 0;
+  margin-left: -22px;
+  margin-bottom: -22px;
+}
+
+.main-filter__color-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+.main-filter__color-link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #dee1e4;
+}
+.main-filter__color-link:hover {
+  box-shadow: 0 0 1px 2px #ff6600;
+}
+
+.main-filter__color-item:nth-child(1) .main-filter__color-link {
+  background: #fff;
+}
+
+.main-filter__color-item:nth-child(2) .main-filter__color-link {
+  background: #ff6600;
+}
+
+.main-filter__color-item:nth-child(3) .main-filter__color-link {
+  background: #cccccc;
+}
+
+.main-filter__color-item:nth-child(4) .main-filter__color-link {
+  background: #000;
+}
+
+.main-filter__color-item:nth-child(5) .main-filter__color-link {
+  background: #0a3153;
+}
+
+.main-filter__color-item:nth-child(6) .main-filter__color-link {
+  background: #ff1800;
+}
+
+.main-filter__color-item:nth-child(7) .main-filter__color-link {
+  background: #fff343;
+}
+
+.main-filter__color-item:nth-child(8) .main-filter__color-link {
+  background: #fb914a;
+}
+
+.main-filter__color-item:nth-child(9) .main-filter__color-link {
+  background: #92c37c;
+}
+
+.main-filter__color-item:nth-child(10) .main-filter__color-link {
+  background: #40a6ff;
+}
+
+.main-filter__color-item:nth-child(11) .main-filter__color-link {
+  background: #9870ad;
+}
+
+.main-filter__color-item:nth-child(12) .main-filter__color-link {
+  background: #7f401d;
+}
