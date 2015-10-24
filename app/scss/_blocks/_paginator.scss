@@ -1,0 +1,39 @@
+.paginator{
+  font-size: 0;
+}
+.paginator__wrapper{
+  float: right;
+}
+.paginator__list{
+  margin: 0; 
+  padding: 0;
+}
+.paginator__item{
+  display: inline-block;
+  margin-left: 3px;
+  list-style-type: none;
+  &:first-child {
+    margin-left: none;
+  }
+}
+// 321 - 5
+.paginator__link{
+  display: block;
+  padding: 3px 9px;
+  font-family: $font-family-bold;
+  font-size: $font-size-extra-small;
+  color: map-get($clrs, grey-lighten);
+  text-decoration: none;
+  border: 1px solid map-get($clrs, grey-border);
+  border-radius: 4px;
+  background: map-get($clrs, white-dark);
+  &:hover {
+    border-color: darken(map-get($clrs, grey-border), 20%);
+  }
+}
+.paginator__link--active{
+  background: darken(map-get($clrs, grey-border-light),10%);
+  &:hover {
+    border-color: map-get($clrs, grey-border);
+  }
+}

@@ -85,6 +85,7 @@ var mainFilter = (function () {
     // проверка валидности и диапазона для мнимального значения
     min.change(function () {
       var $this = $(this);
+          //oldVal = $this.val();
       if (!($this.val().match(/^\d+$/))) {
         console.log("только цифры");
         return;
@@ -96,6 +97,7 @@ var mainFilter = (function () {
       } else {
         slider.slider("values", 0, $(this).val());
       }
+      //console.log(oldVal);
     });
 
     // проверка валидности и диапазона для максимального значения

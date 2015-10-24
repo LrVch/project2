@@ -27,7 +27,7 @@ mixin links(className, links)
           a(href="#" class= className + "__link")= link  
           
 //- простой список с сылками и активным пунктом
-//- +inksActive('links', ['Главная', 'Новости', "О компании", "Сравнение"], 1)
+//- +linksActive('links', ['Главная', 'Новости', "О компании", "Сравнение"], 1)
 mixin linksActive(className, links, activeIndex)
   div(class= className)
     ul(class= className + "__list")
