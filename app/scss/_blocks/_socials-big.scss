@@ -1,4 +1,4 @@
-.socials {
+.socials-big {
   font-size: 0;
 }
 .socials-big__list { 
@@ -10,7 +10,7 @@
   margin-left: 27px;
   list-style-type: none;
   &:first-child {
-    margin-left: 0;
+    margin-left: 0; 
   }
 }
 .socials-big__link {
@@ -19,15 +19,15 @@
   text-decoration: none;
   text-indent: -9999px;
 }
-   
-$socials-big: (vk: vk--hover, tw: tw--hover, fb: fb--hover);
-$socials-big-map: sprite-map('big-social/*.png', $spacing: 70px, $layout: vertical);
+     
+$socials-big: (vkBig: vkBig--hover, twBig: twBig--hover, fbBig: fbBig--hover);
+$icons-map: sprite-map('icons/*.png', $spacing: 70px, $layout: vertical);
 @each $social, $hover in $socials-big {
   .socials-big__link--#{$social} {
-    @include get-sprite($socials-big-map, $social);
+    @include get-sprite($icons-map, $social);
   }
   .socials-big__link--#{$social}:hover {
-    @include get-sprite($socials-big-map, $hover);
+    @include get-sprite($icons-map, $hover);
   }
   
 } 

@@ -8,8 +8,9 @@
 		<meta name="keywords" content="">
 		<meta name="author" content="">
 		<!-- build:css css/vendor.min.css -->
-		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 		<link rel="stylesheet" href="bower/jquery-ui/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="bower/select2/dist/css/select2.css">
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 		<!-- endbuild  -->
 		<!-- build:css css/style.min.css -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -92,7 +93,7 @@
 						<div class="breadcrumbs"> 
 							<ul class="breadcrumbs__list">
 								<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная &gt;</a></li>
-								<li class="breadcrumbs__item"><span href="#" class="breadcrumbs__link breadcrumbs__link--active">Каталог</span></li>
+								<li class="breadcrumbs__item"><span class="breadcrumbs__link breadcrumbs__link--active">Каталог</span></li>
 							</ul>
 						</div>
 						<h1 class="title-main">Мобильные телефоны</h1>
@@ -165,22 +166,23 @@
 														</li>
 													</ul>
 												</li>
+												<!-- цвета  -->
 												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Цвет</a>
 													<ul class="main-filter__inner">
 														<li class="main-filter__inner-item">
 															<ul class="main-filter__color-list">
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
-																<li class="main-filter__color-item"><a href="#" class="main-filter__color-link"></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link main-filter__color-link--active"></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
+																<li class="main-filter__color-item"> <a href="#" class="main-filter__color-link "></a></li>
 															</ul>
 														</li>
 													</ul>
@@ -216,7 +218,25 @@
 								</aside>
 							</div>
 							<div class="big-col">
-								<div class="goods">right col</div>
+								<div class="goods">
+									<div class="sort">
+										<div class="row">
+											<div class="sort__select-wrapper"><span class="sort__select-text">Сортировать по</span>
+												<select class="sort__select-select">
+													<option value="по цене">по цене</option>
+													<option value="по популярности">по популярности</option>
+												</select>
+											</div>
+											<div class="sort__view-wrapper"><span class="sort__view-text">Вид каталога</span>
+												<ul class="sort__view-list">
+													<li class="sort__view--item"><a href="#" class="sort__view-link sort__view-link--row sort__view-link--active"></a></li>
+													<li class="sort__view--item"><a href="#" class="sort__view-link sort__view-link--grid  "></a></li>
+													<li class="sort__view--item"><a href="#" class="sort__view-link sort__view-link--list  "></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="row">
@@ -272,9 +292,9 @@
 							<div class="page-footer__social-wrapper">
 								<div class="socials-big">  
 									<ul class="socials-big__list">
-										<li class="socials-big__item"><a href="#" title="фэйсбук" class="socials-big__link socials-big__link--fb">фэйсбук</a></li>
-										<li class="socials-big__item"><a href="#" title="в контакте" class="socials-big__link socials-big__link--vk">в контакте</a></li>
-										<li class="socials-big__item"><a href="#" title="твиттер" class="socials-big__link socials-big__link--tw">твиттер</a></li>
+										<li class="socials-big__item"><a href="#" title="фэйсбук" class="socials-big__link socials-big__link--fbBig">фэйсбук</a></li>
+										<li class="socials-big__item"><a href="#" title="в контакте" class="socials-big__link socials-big__link--vkBig">в контакте</a></li>
+										<li class="socials-big__item"><a href="#" title="твиттер" class="socials-big__link socials-big__link--twBig">твиттер</a></li>
 									</ul>
 								</div>
 							</div>
@@ -305,10 +325,13 @@
 		<script src="bower/jquery/jquery.js"></script>
 		<script src="bower/jquery.columnizer/src/jquery.columnizer.js"></script>
 		<script src="bower/jquery-ui/jquery-ui.js"></script>
+		<script src="bower/select2/dist/js/select2.js"></script>
 		<!-- endbuild -->
 		<!-- build:js js/script.min.js -->
-		<script src="js/script.js"></script>
+		<script src="js/select.js"></script>
+		<script src="js/columnize.js"></script>
 		<script src="js/main-filter.js"></script>
+		<script src="js/sort.js"></script>
 		<!-- endbuild -->
 	</body>
 </html>

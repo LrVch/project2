@@ -43,7 +43,8 @@ mixin breadcrumbsA(className, items, activeIndx)
       each item, index in items
         li(class=className + "__item")
           a(href="#" class= className + "__link " + ((items.length == index + 1) ? className + '__link' + '--active' : ''))= (items.length == index + 1) ? item : item + " >"
-//- breadcrumbs с разделителем ">" и поледний пункт спан      
+//- breadcrumbs с разделителем ">" и поледний пункт спан  
+//- +breadcrumbs('breadcrumbs', ['Главная', 'Новости', "О компании"], 2)
 mixin breadcrumbs(className, items, activeIndx)
   div(class= className)  
     ul(class= className + "__list")
@@ -53,7 +54,7 @@ mixin breadcrumbs(className, items, activeIndx)
               a(href="#" class= className + "__link")= (items.length == index + 1) ? item : item + " >" 
         - else       
             li(class= className + "__item")
-              span(href="#" class= className + "__link " + className + '__link' + '--active')= item
+              span(class= className + "__link " + className + '__link' + '--active')= item
               
               
 //- +form()

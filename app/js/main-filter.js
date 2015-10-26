@@ -1,3 +1,4 @@
+"use strict";
 var mainFilter = (function () {
 
   function init() {
@@ -59,6 +60,13 @@ var mainFilter = (function () {
   // выбор цвета
   function _choice(e) {
     e.preventDefault();
+    var
+      $this = $(this),
+      list = $this.closest(".main-filter__color-list"),
+      links = list.find(".main-filter__color-link");
+      
+      links.removeClass("main-filter__color-link--active");
+      $this.addClass("main-filter__color-link--active");
   }
   // слайдер
   function _slider() {

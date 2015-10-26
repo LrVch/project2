@@ -1,0 +1,61 @@
+.sort{
+  margin-bottom: 20px;
+  padding-left: 21px;
+  border: 1px solid darken(map-get($clrs, grey-border), 4%);
+  border-radius: 5px;
+  background: lighten(map-get($clrs, blue-light), 2%);
+}
+.sort__select-wrapper{
+  float: left;
+  padding-top: 11px;
+}
+.sort__view-wrapper{
+  float: right;
+}
+.sort__select-text,
+.sort__view-text {
+  font-family: $font-family-regular;
+  font-size: $font-base-size;
+  color: map-get($clrs,  grey-dark);
+}
+.sort__select-text {
+  margin-right: 5px;
+}
+.sort__select-select{
+  &:focus {
+    outline: none;
+  }
+}
+.sort__view-text{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.sort__view-list{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.sort__view--item{
+  display: inline-block;
+  padding: 18px;
+  border-left: 1px solid darken(map-get($clrs, grey-border), 4%);
+  list-style-type: none;
+}
+.sort__view-link{
+  display: block;
+  text-indent: -9999px;
+}
+
+$views: (row: row--active, grid: grid--active, list: list--active);
+$icons-map: sprite-map('icons/*.png', $spacing: 70px, $layout: vertical);
+@each $view, $active in $views {
+  .sort__view-link--#{$view} {
+    @include get-sprite($icons-map, $view);
+  }
+  .sort__view-link--active.sort__view-link--#{$view} {
+    @include get-sprite($icons-map, $active);
+  }
+}

@@ -22,12 +22,12 @@
 }
 
 $socials:(vk: vk--hover, tw: tw--hover, fb: fb--hover);
-$socials-map: sprite-map('small-social/*.png', $spacing: 70px, $layout: vertical);
+$icons-map: sprite-map('icons/*.png', $spacing: 70px, $layout: vertical);
 @each $social, $hover in $socials {
   .socials__link--#{$social} {
-    @include get-sprite($socials-map, $social);
+    @include get-sprite($icons-map, $social);
   }
   .socials__link--#{$social}:hover {
-    @include get-sprite($socials-map, $hover);
+    @include get-sprite($icons-map, $hover); 
   }
 }

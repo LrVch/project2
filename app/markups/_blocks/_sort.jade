@@ -1,0 +1,15 @@
+.sort
+  .row
+    .sort__select-wrapper
+      span.sort__select-text Сортировать по
+      select.sort__select-select
+        option(value="по цене") по цене
+        option(value="по популярности") по популярности
+    .sort__view-wrapper
+      span.sort__view-text Вид каталога
+      ul.sort__view-list
+        - var views = ["row", "grid", "list"], Index = 0
+            each view, index in views 
+              li.sort__view--item
+                a(href="#" class = "sort__view-link " + "sort__view-link--" + view + " " + ((index == Index) ? "sort__view-link--active" : " " ))
+

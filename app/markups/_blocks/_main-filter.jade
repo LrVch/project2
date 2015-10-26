@@ -60,15 +60,16 @@
                 span.slider__pre до
                 input.slider__input#max(type="text" name="max")  
             .slider__slide#slider   
-      
+    // цвета  
     li.main-filter__item
       a(href="#").main-filter__trigger  Цвет
       ul.main-filter__inner
           li.main-filter__inner-item
             ul.main-filter__color-list
+              - var Index = 0;
               - for (var i= 0; i <12; i++)
-                  li.main-filter__color-item
-                    a(href="#").main-filter__color-link
+                  li.main-filter__color-item 
+                    a(href="#" class= "main-filter__color-link " + ((Index != i) ? "" : "main-filter__color-link--active"))
       
     li.main-filter__item
       a(href="#").main-filter__trigger  Операционные системы
