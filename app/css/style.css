@@ -1193,6 +1193,7 @@ footer {
   border: 1px solid #dee1e4;
   border-top: none;
   background: #fbfbfb;
+  cursor: default;
 }
 .mobile:hover {
   box-shadow: 0px 3px 10px -1px rgba(118, 118, 118, 0.75);

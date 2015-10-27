@@ -178,7 +178,7 @@ var log = function (error) {
 
 
 // * ====================================================== *
-//   DEPLOY
+//   BUILD
 // * ====================================================== *
 
 
@@ -232,7 +232,7 @@ gulp.task("images", function () {
       progressive: true,
       interlaced: true
     }))
-    .pipe(filter(["*.jpg", "*.svg", "*.jpeg", "*.png", "*.webp", "*.gif", "!/sprite"]))
+    .pipe(filter(["*.jpg", "*.svg", "*.jpeg", "*.png", "*.webp", "*.gif", "!/icons"]))
     .pipe(gulp.dest(RS_CONF.path.distImgDir));
 });
 
@@ -261,15 +261,18 @@ gulp.task("dist", ["useref", "images", "fonts", "extras", "size-app"], function 
 
 // Собираем папку DIST - только когда файлы готовы
 // ******************************************************
-gulp.task("build", ["clean-dist", "wiredep-bower"], function () {
+gulp.task("build", ["clean-dist"], function () {
   gulp.start("dist");
 });
+/*gulp.task("build", ["clean-dist", "wiredep-bower"], function () {
+  gulp.start("dist");  // с wiredep-bower
+});*/
 
 // Отправка проекта на сервер
 // ******************************************************
 gulp.task("deploy", function () {
   var conn = ftp.create({
-    //host: RS_CONF.conn.host,
+    host: RS_CONF.conn.host,
     user: RS_CONF.conn.user,
     password: RS_CONF.conn.password,
     parallel: 10,
