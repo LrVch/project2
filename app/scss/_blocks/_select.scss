@@ -1,0 +1,52 @@
+.select2-selection__arrow {
+  position: relative;
+//  /background: #000;
+  b {
+    display: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    border-top: 7px solid darken(map-get($clrs, grey-light), 45%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    //border-bottom: 6px solid transparent;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border-top: 5px solid map-get($clrs, white);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    //border-bottom: 6px solid transparent;
+  }
+}
+
+.select2-container--open {
+  .select2-selection__arrow {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 3px;
+      border-bottom: 7px solid darken(map-get($clrs, grey-light), 35%);
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid transparent;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      border-bottom: 5px solid map-get($clrs, white);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid transparent;
+    }
+  }
+}
