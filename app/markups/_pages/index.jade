@@ -1,7 +1,7 @@
 extends ../_templates/main
 
 block title  
-  | Main page
+  | Мобильные телефоны
    
 block content
   include ../_blocks/_breadcrumbs
@@ -18,9 +18,18 @@ block content
     .big-col
       .goods
         include ../_blocks/_sort
-        include ../_blocks/_mobiles
+        .goods__inner
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
+          include ../_blocks/_mobiles
         
-  .row
-    .paginator__wrapper
-      include ../_blocks/_paginator
+      .row
+        .paginator__wrapper
+          include ../_blocks/_paginator
   include ../_blocks/_info

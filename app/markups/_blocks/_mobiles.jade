@@ -1,0 +1,45 @@
+- var mobile = {imgSrc: "samsung.jpg", prevSrc: ["alcatel.jpg","fly.jpg","highscreen.jpg"], article: "189238", cost: "11 290 ₽", descTitle: "Samsung GT-I9301I GALAXY S 3 ", descSpan: "Смартфон", desc: "Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц..."}
+
+- var tableMob = {typeSim: ["Тип SIM-карты", "Micro-SIM"], countSim: ["Количество SIM-карт", "1"], color: ["Цвет", "Белый"], OS: ["ОC", "Android"], G3: ["Связь 3G", "Есть"], G4: ["4G (LTE)", "Нет"], GPS: ["GPS-модуль", "Есть"]}
+
+  article.mobile.mobile__row 
+    - var srcPath = "img/"
+      .row
+        .mobile__foto
+          .foto
+            .foto__main
+              img(src= srcPath + mobile.imgSrc alt= mobile.imgSrc class="foto__main-img")
+            .foto__preview
+              ul.foto__preview-list
+                each img in mobile.prevSrc
+                  li.foto__preview-item
+                    a(href="#").foto__preview-link
+                      img(src= srcPath + img alt= img class="foto__preview-item-img")
+          .article
+            span.article__span Артикул
+            = mobile.article        
+        .mobile__description
+          .row
+            .desc
+              h2.desc__title
+                span.desc__title-span= mobile.descSpan
+                = mobile.descTitle
+              p.desc__text= mobile.desc
+              
+              +table("desc__table", { typeSim: ["Тип SIM-карты", "Micro-SIM"], countSim: ["Количество SIM-карт", "1"], color: ["Цвет", "Белый"], OS: ["ОC", "Android"], G3: ["Связь 3G", "Есть"], G4: ["4G (LTE)", "Нет"], GPS: ["GPS-модуль", "Есть"]}); 
+              .stars  
+                -var Index = 4
+                - for (var i = 0; i < 5; i++)
+                    a(href="#" class="stars__star " + ((i == Index) ? "" : "stars__star--full")) 
+                span.stars__count 4
+            .price
+              .row
+                .price__cost
+                  span.price__cost-span= mobile.cost
+                .price__apply
+                  .row
+                    .price__basket
+                      button(type="button" class="btn price__button") В корзину
+                    .price__exist
+                      span.price__exist-span В наличии
+              

@@ -56,9 +56,17 @@ mixin breadcrumbs(className, items, activeIndx)
             li(class= className + "__item")
               span(class= className + "__link " + className + '__link' + '--active')= item
               
-              
+//- table
+//- +table("className", {typeSim: ["Тип SIM-карты", "Micro-SIM"], typeSim: ["Тип SIM-карты", "Micro-SIM"]})
+mixin table(className, data)
+  table(class= className)
+    each tr in data
+      tr(class= className + "-tr")
+        each td in tr
+          td(class= className + "-td")= td
+
+
 //- +form()
-//- +form('form', '#', 'post', {textarea:{"fds": "desc"}, input:{submit:"submit"}} )    
 mixin form(className, action, method, inputs)
   form(class=className action=action method=method)
     each attr, typeInput in inputs

@@ -17,7 +17,7 @@ html
     // endbuild  
 
     // build:css css/style.min.css 
-    link(rel="stylesheet" type='text/css' href="css/style.css")
+    link(rel="stylesheet" type='text/css' href="css/style.css") 
     // endbuild 
 
     link(rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16")
@@ -32,7 +32,7 @@ html
   body
     .wrapper
       .maincontent
-        include ../_blocks/_header   
+        include ../_blocks/_header    
         include ../_blocks/_nav
         .content
           .content__inner
@@ -47,6 +47,7 @@ html
     script(src="bower/jquery.columnizer/src/jquery.columnizer.js")
     script(src="bower/jquery-ui/jquery-ui.js")
     script(src="bower/select2/dist/js/select2.js")
+    script(src="bower/jquery-placeholder/jquery.placeholder.js")
     // endbuild 
     
     // build:js js/script.min.js 
@@ -54,4 +55,6 @@ html
     script(src="js/columnize.js")
     script(src="js/main-filter.js")
     script(src="js/sort.js")
+    script(src="js/slideshow.js")
+    script(src="js/jquery-placeholder.js")
     // endbuild 
