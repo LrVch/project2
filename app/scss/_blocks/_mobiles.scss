@@ -166,7 +166,7 @@ $full in $stars {
 
 .price__exist-span {
   position: relative;
-  padding-left: 23px;
+  padding-left: 14px;
   font-family: $font-family-bold;
   font-size: $font-size-extra-small;
   color: map-get($clrs, grey-lighten);
@@ -175,7 +175,7 @@ $full in $stars {
     content: "";
     width: 6px;
     height: 6px;
-    left: 7px;
+    left: 0;
     top: 6px;
     background: map-get($clrs, green-dot);
     border-radius: 50%;
@@ -416,15 +416,19 @@ $line-hiight: 33px;
    .price__basket {
     float: right;
   }
-  .price__exist {
+  .price__exist { 
     float: left;
+    width: 105px;
+    padding-right: 3px;
+    box-sizing: border-box;
+    text-align: right;
   }
   .price__exist-span {
     line-height: $line-hiight;
   }
   .price__exist-span {
     &:before {
-      left: 11px;
+      left: 0;
     }
   }
 }

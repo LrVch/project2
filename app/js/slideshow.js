@@ -6,6 +6,7 @@ var slideShow = (function () {
 
   function _setUpListners() {
     $('.foto__preview-item').on('mouseenter', _slideShow);
+    $('.foto__preview-item').on('click', _prevent);
   };
 
   function _slideShow(e) {
@@ -28,6 +29,9 @@ var slideShow = (function () {
     }
 
   };
+  function _prevent(e) {
+    e.preventDefault();
+  }
 
   return {
     init: init

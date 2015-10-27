@@ -68,6 +68,8 @@
 
 .main-filter__trigger--closed {
   position: relative;
+  //background: map-get($clrs, blue-light);
+
   &:hover {
     background: map-get($clrs, blue-light);
     &:before {
