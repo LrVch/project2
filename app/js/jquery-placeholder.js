@@ -1,3 +1,5 @@
-(function(){
-  $('input, textarea').placeholder();
+(function () {
+  if ($('input, textarea').length) {
+    $('input, textarea').placeholder();
+  }
 })();
