@@ -55,11 +55,24 @@
             .slider__inner
               .slider__input-wrapper.slider__input-wrapper-min
                 span.slider__pre от
-                input.slider__input#min(type="text" name="min" data-minVal="0")
+                input.slider__input#min(type="text" name="min" qtip-position="top" qtip-content-motnumber="только цифры" qtip-content-leftout="значение меньше левого края диапазона" qtip-content-rightout="значение больше правого края диапазона")
               .slider__input-wrapper.slider__input-wrapper-max
                 span.slider__pre до
-                input.slider__input#max(type="text" name="max" data-maxVal="26000")  
-            .slider__slide#slider(data-minVal="10000")   
+                input.slider__input#max(type="text" name="max" qtip-position="top" qtip-content-motnumber="только цифры" qtip-content-leftout="значение меньше левого края диапазона" qtip-content-rightout="значение больше правого края диапазона")  
+            .slider__slide#slider(data-minVal="1990" data-maxVal="6000" data-minRange="0" data-maxRange="23000")   
+      li.main-filter__item
+        a(href="#").main-filter__trigger  Цена
+        ul.main-filter__inner
+          li.main-filter__inner-item
+            .slider
+              .slider__inner
+                .slider__input-wrapper.slider__input-wrapper-min
+                  span.slider__pre от
+                  input.slider__input#min(type="text" name="min" qtip-position="top" qtip-content-motnumber="только цифры" qtip-content-leftout="значение меньше левого края диапазона" qtip-content-rightout="значение больше правого края диапазона")
+                .slider__input-wrapper.slider__input-wrapper-max
+                  span.slider__pre до
+                  input.slider__input#max(type="text" name="max" qtip-position="top" qtip-content-motnumber="только цифры" qtip-content-leftout="значение меньше левого края диапазона" qtip-content-rightout="значение больше правого края диапазона")  
+              .slider__slide#slider(data-minVal="190" data-maxVal="3000" data-minRange="0" data-maxRange="5000")   
     // цвета  
     li.main-filter__item
       a(href="#").main-filter__trigger  Цвет

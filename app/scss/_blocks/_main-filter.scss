@@ -256,3 +256,19 @@ $countColor: 0;
     }
   }
 }
+
+
+.myclass {
+  max-width: 174px;
+  padding: 2px 0px;
+  border-color: map-get($clrs, orange);
+  font-size: 13px;
+  color: map-get($clrs, white);
+  text-align: center;
+  box-shadow: inset 2px 2px 0 #f7c0ad;
+  background: map-get($clrs, orange);
+  
+  & .qtip-content {
+  text-align: center;
+  }
+}

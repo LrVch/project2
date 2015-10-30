@@ -71,108 +71,122 @@
     }
     // слайдер
     function _slider() {
-      var
-        slider = $("#slider"),
-        min = $("#min"),
-        minVal = min.attr("data-minVal"),
-        max = $("#max"),
-        maxVal = max.attr("data-maxVal"),
-        val = {
-          minVal: minVal,
-          maxVal: maxVal
-        };
+      $(".slider__slide").each(function (i, slider) {
+        var
+          $this = $(this),
+          sliderBlock = $this.parent(".slider"),
+          minInput = sliderBlock.find("input[name='min']"),
+          maxInput = sliderBlock.find("input[name='max']"),
+          maxVal = $this.data("maxval"),
+          minVal = $this.data("minval"),
+          maxRange = $this.data("maxrange"),
+          minRange = $this.data("minrange");
 
-      /*slider.slider({
-        values: [100,10000],
-        create: function (event, ui) {
-          //ui.values.push(100,13000);
-          console.log(this);
-        },
-        //min: 0,
-        max: 26000,
-        //values: [100, 13000],
-        range: true,
-        slide: function (event, ui) {
-          min.val(ui.values[0]);
-          max.val(ui.values[1]);
-          //ui.values.push(12,12);
-        }
-      });*/
+        $this.slider({
+          range: true,
+          animate: 600,
+          min: minRange,
+          max: maxRange,
+          values: [minVal, maxVal],
+          slide: function (event, ui) {
+            minInput.val(ui.values[0]);
+            maxInput.val(ui.values[1]);
+            minInput.trigger("hideTooltip");
+            maxInput.trigger("hideTooltip");
+          }
+        });
+        minInput.val($this.slider("values", 0));
+        maxInput.val($this.slider("values", 1));
 
-      /*slider.slider("option", {
-        min: 100,
-        max: 26000,
-        values: [100, 13000],
-        range: true,
-        slide: function (event, ui) {
-          min.val(ui.values[0]);
-          max.val(ui.values[1]);
-        }
-      }, minVal);
-*/
-///////////////////////////////////////////////
-
-      slider.slider({
-        range: true,
-        min: 0,
-        max: 26000,
-        values: [100, 13000],
-        slide: function (event, ui) {
-          min.val(ui.values[0]);
-          max.val(ui.values[1]);
-        }
-      });
-
-       // установка значений слайдера в инпуты
-        min.val(slider.slider("values", 0));
-        max.val(slider.slider("values", 1));
- 
         // проверка валидности и диапазона для мнимального значения
-        min.change(function () {
+        minInput.change(function () {
           var $this = $(this);
 
-          //oldVal = $this.val();
           if (!($this.val().match(/^\d+$/))) {
-            console.log("только цифры");
+            $this.trigger("hideTooltip");
+            _createQtip($this, "notnumber");
             return;
           }
-          if ($this.val() < slider.slider("option", "min")) {
-            console.log("вы ввели отрицателное значение");
-          } else if ($this.val() > slider.slider("values", 1)) {
-            console.log("вы ввели значение больше прового края диапазона");
+          if ($this.val() < $(slider).slider("option", "min")) {
+            $this.trigger("hideTooltip");
+            _createQtip($this, "leftout");
+          } else if ($this.val() > $(slider).slider("values", 1)) {
+            $this.trigger("hideTooltip");
+            _createQtip($this, "rightout");
           } else {
-            slider.slider("values", 0, $(this).val());
+            $(slider).slider("values", 0, $(this).val());
           }
           //console.log(oldVal);
         });
 
         // проверка валидности и диапазона для максимального значения
-        max.change(function () {
+        maxInput.change(function () {
           var $this = $(this);
 
           if (!($this.val().match(/^\d+$/))) {
             console.log("только цифры");
+             $this.trigger("hideTooltip");
+            _createQtip($this, "notnumber");
             return;
           }
-          if ($this.val() > slider.slider("option", "max")) {
-            console.log("вы ввели значение больше правого края диапазона");
-          } else if ($this.val() < slider.slider("values", 0)) {
-            console.log("вы ввели значение меньше левого края диапазона");
+          if ($this.val() > $(slider).slider("option", "max")) {
+             $this.trigger("hideTooltip");
+            _createQtip($this, "rightout");
+          } else if ($this.val() < $(slider).slider("values", 0)) {
+            $this.trigger("hideTooltip");
+            _createQtip($this, "leftout");
           } else {
-            slider.slider("values", 1, $(this).val());
+            $(slider).slider("values", 1, $(this).val());
           }
         });
 
+      });
+
     }
-    
+    // Создаёт тултипы
+    function _createQtip(el, text) {
+
+      var position = {
+        my: 'bottom center',
+        at: 'top center'
+      };
+      
+      switch (text) {
+        case "notnumber": var text = el.attr("qtip-content-motnumber");
+          break
+        case "leftout": var text = el.attr("qtip-content-leftout");
+          break
+        case "rightout": var text = el.attr("qtip-content-rightout");
+          break
+      }
+      
+      var el = el.qtip({
+        content: {
+          text: text
+        },
+        show: {
+          event: 'show'
+        },
+        hide: {
+          event: 'keydown hideTooltip'
+        },
+        position: position,
+        style: {
+          classes: 'qtip-rounded myclass'
+        }
+      }).trigger('show');
+      //el.trigger("hideTooltip");
+      //return el;  
+    };
+
     return {
       init: init
     };
 
   })();
-  
+
   if ($(".main-filter").length) {
     mainFilter.init();
   }
-  
+
 }());

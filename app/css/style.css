@@ -830,6 +830,20 @@ footer {
   background: #7f401d;
 }
 
+.myclass {
+  max-width: 174px;
+  padding: 2px 0px;
+  border-color: #ff6600;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  box-shadow: inset 2px 2px 0 #f7c0ad;
+  background: #ff6600;
+}
+.myclass .qtip-content {
+  text-align: center;
+}
+
 .slider {
   padding-bottom: 10px;
 }
