@@ -209,6 +209,7 @@ $full in $stars {
     margin-right: 8px;
   }
   .mobile__description {
+    position: relative;
     float: right;
     width: 539px;
   }
@@ -247,12 +248,19 @@ $full in $stars {
     margin-bottom: 42px;
   }
   .price {
+//    position: relative;
     float: right;
     padding-right: 5px;
   }
   .price__cost {
     text-align: right;
     margin-bottom: 125px;
+  }
+  .price__apply {
+    position: absolute;
+    bottom: 1px;
+    right: 4px;
+    width: 120px;
   }
   .price__basket {
     float: right;
