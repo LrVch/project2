@@ -1,44 +1,36 @@
 $container-width: 1100px;
-$hedaer-width: 1200px;
 $footer-padding-top: 35px;
 $footer-padding-bottom: 0px;
-$footer-height: 220;
-html {
-  width: 100%;
-  height: 100%;
-  //font-size: 100.01%;
-}
-
+$footer-height: 225px;
+$hedaer-width: 1200px;
+//===============================================
+html,
 body {
-  width: 100%;
-  height: 100%;
+  min-width: $container-width + 20px; // для адаптива закоментить
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: $font-base-family;
   font-size: $font-base-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  padding-bottom: $footer-height;
 }
 
 %container {
   width: $container-width;
   margin: 0 auto;
-  position: relative;
-  padding: 0 10px;
 }
-
-.wrapper { 
-  position: relative;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  overflow: hidden;
-  min-width: $container-width + 20;
-  background: map-get($clrs, grey-light);
-  &:after {
-    display: block;
-    position: relative;
-    height: $footer-height;
-  }
+%container-flu {
+  max-width: $container-width;
+  margin: 0 auto;
 }
 
 %header {
@@ -48,12 +40,13 @@ body {
 }
 
 footer {
-  position: relative;
-  //margin-top: -$footer-height;
-  height: $footer-height - $footer-padding-top - $footer-padding-bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding-top: $footer-padding-top;
   padding-bottom: $footer-padding-bottom;
-  background: rgba(0,0,0,.3);
+  height: $footer-height - $footer-padding-top - $footer-padding-bottom;
 }
 
 %debug {

@@ -16,15 +16,14 @@ $columnMargin: 36px;
 .info__block {
   margin-left: -$columnMargin;
   margin-bottom: -$columnMargin;
-}
-
-p {
-  margin-left: $columnMargin;
-  margin-bottom: 20px;
-  font-family: $font-family-regular;
-  font-size: $font-base-size;
-  line-height: $font-size-regular-big;
-  color: map-get($clrs, grey);
-  text-indent: 36px;
-  text-align: justify;
+  p {
+    margin-left: $columnMargin;
+    margin-bottom: 20px;
+    font-family: $font-family-regular;
+    font-size: $font-base-size;
+    line-height: $font-size-regular-big;
+    color: map-get($clrs, grey);
+    text-indent: 36px;
+    text-align: justify;
+  }
 }

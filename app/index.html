@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru-RU"> 
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,13 +48,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="page-heder__bottom">
+					<div class="page-header__bottom">
 						<div class="page-header__inner">
 							<div class="row">
-								<div class="page-heder__logo-wrapper">
+								<div class="page-header__logo-wrapper">
 									<div class="logo"><a href="#" class="logo__link"><img src="img/logo--orange.png" alt="cooltech" class="logo__img"></a></div>
 								</div>
-								<div class="page-heder__search-wrapper">
+								<div class="page-header__search-wrapper">
 									<div class="search">
 										<form action="#" method="GET" class="search__form">
 											<input type="search" placeholder="Что будем искать" class="search__input search__search">
@@ -62,7 +62,7 @@
 										</form>
 									</div>
 								</div>
-								<div class="page-heder__links-wrapper">
+								<div class="page-header__links-wrapper">
 									<div class="links">
 										<ul class="links__list">
 											<li class="links__item"><a href="#" class="links__link">Карта проезда</a></li>
@@ -149,19 +149,20 @@
 														<li class="main-filter__inner-item"><a href="#" class="main-filter__inner-reset">Сбросить фильтр</a></li>
 													</ul>
 												</li>
+												<!-- цена      -->
 												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Цена</a>
 													<ul class="main-filter__inner">
 														<li class="main-filter__inner-item">
 															<div class="slider">
 																<div class="slider__inner">
 																	<div class="slider__input-wrapper slider__input-wrapper-min"><span class="slider__pre">от</span>
-																		<input id="min" type="text" name="min" class="slider__input">
+																		<input id="min" type="text" name="min" data-minVal="0" class="slider__input">
 																	</div>
 																	<div class="slider__input-wrapper slider__input-wrapper-max"><span class="slider__pre">до</span>
-																		<input id="max" type="text" name="max" class="slider__input">
+																		<input id="max" type="text" name="max" data-maxVal="26000" class="slider__input">
 																	</div>
 																</div>
-																<div id="slider" class="slider__slide">  </div>
+																<div id="slider" data-minVal="10000" class="slider__slide">  </div>
 															</div>
 														</li>
 													</ul>
@@ -187,6 +188,7 @@
 														</li>
 													</ul>
 												</li>
+												<!-- операционные системы  -->
 												<li class="main-filter__item"><a href="#" class="main-filter__trigger"> Операционные системы</a>
 													<ul class="main-filter__inner">
 														<li class="main-filter__inner-item">
@@ -250,7 +252,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -322,7 +324,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -394,7 +396,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -466,7 +468,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -538,7 +540,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -610,7 +612,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -682,7 +684,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -754,7 +756,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -826,7 +828,7 @@
 															</ul>
 														</div>
 													</div>
-													<div class="article"><span class="article__span">Артикул</span>189238
+													<div title="189238" class="article"><span class="article__span">Артикул</span>189238
 													</div>
 												</div>
 												<div class="mobile__description">
@@ -905,72 +907,60 @@
 						<section class="info">
 							<h2 class="info__title">Важная информация</h2>
 							<div id="info-block" class="info__block">
-								<div class="info__coll">
-									<p class="info__text">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-								</div>
-								<div class="info__coll">
-									<p class="info__text">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-								</div>
-								<div class="info__coll">
-									<p class="info__text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
-								</div>
-								<div class="info__coll">
-									<p class="info__text">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-								</div>
-								<div class="info__coll">
-									<p class="info__text">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-								</div>
-								<div class="info__coll">
-									<p class="info__text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся </p>
-								</div>
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+								<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся</p>
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+								<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся </p>
 							</div>
 						</section>
 					</div>
 				</div>
-			</div>
-		</div>
-		<footer class="page-footer"> 
-			<div class="page-footer__inner">
-				<div class="row">
-					<div class="small-col">
-						<div class="page-footer__logo-wrapper">
-							<div class="logo"><a href="#" class="logo__link"><img src="img/logo--white.png" alt="cooltech" class="logo__img"></a></div>
-						</div>
-					</div>
-					<div class="big-col">
+				<footer class="page-footer"> 
+					<div class="page-footer__inner">
 						<div class="row">
-							<div class="page-footer__social-wrapper">
-								<div class="socials-big">  
-									<ul class="socials-big__list">
-										<li class="socials-big__item"><a href="#" title="фэйсбук" class="socials-big__link socials-big__link--fbBig">фэйсбук</a></li>
-										<li class="socials-big__item"><a href="#" title="в контакте" class="socials-big__link socials-big__link--vkBig">в контакте</a></li>
-										<li class="socials-big__item"><a href="#" title="твиттер" class="socials-big__link socials-big__link--twBig">твиттер</a></li>
-									</ul>
+							<div class="small-col">
+								<div class="page-footer__logo-wrapper">
+									<div class="logo"><a href="#" class="logo__link"><img src="img/logo--white.png" alt="cooltech" class="logo__img"></a></div>
+								</div>
+							</div>
+							<div class="big-col">
+								<div class="row">
+									<div class="page-footer__social-wrapper">
+										<div class="socials-big">  
+											<ul class="socials-big__list">
+												<li class="socials-big__item"><a href="#" title="фэйсбук" class="socials-big__link socials-big__link--fbBig">фэйсбук</a></li>
+												<li class="socials-big__item"><a href="#" title="в контакте" class="socials-big__link socials-big__link--vkBig">в контакте</a></li>
+												<li class="socials-big__item"><a href="#" title="твиттер" class="socials-big__link socials-big__link--twBig">твиттер</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="page-footer__foter-links-wrapper">   
+									<div class="foter-links">
+										<ul class="foter-links__list">
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Мр3 плееры</a></li>
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Мобильные телефоны</a></li>
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Планшеты</a></li>
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Бытовая техника</a></li>
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Аксессуары</a></li>
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Ноутбуки</a></li>
+											<li class="foter-links__item"><a href="#" class="foter-links__link">Персональные компьютеры </a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="page-footer__foter-links-wrapper">   
-							<div class="foter-links">
-								<ul class="foter-links__list">
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Мр3 плееры</a></li>
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Мобильные телефоны</a></li>
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Планшеты</a></li>
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Бытовая техника</a></li>
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Аксессуары</a></li>
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Ноутбуки</a></li>
-									<li class="foter-links__item"><a href="#" class="foter-links__link">Персональные компьютеры </a></li>
-								</ul>
-							</div>
+					</div>
+					<div class="copy">
+						<div class="copy__inner">
+							<p class="copy__text"> All rights reserved. 2015. no copy alowed</p>
 						</div>
 					</div>
-				</div>
+				</footer>
 			</div>
-			<div class="copy">
-				<div class="copy__inner">
-					<p class="copy__text"> All rights reserved. 2015. no copy alowed</p>
-				</div>
-			</div>
-		</footer>
+		</div>
 		<!-- build:js js/vendor.min.js -->
 		<script src="bower/jquery/jquery.js"></script>
 		<script src="bower/jquery.columnizer/src/jquery.columnizer.js"></script>

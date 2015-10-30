@@ -143,49 +143,39 @@ a:focus {
   line-height: 34px;
 }
 
-html {
-  width: 100%;
-  height: 100%;
-}
-
+html,
 body {
-  width: 100%;
-  height: 100%;
+  min-width: 1120px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  padding-bottom: 225px;
 }
 
 .page-header__inner, .page-footer__inner, .navigation__inner, .content__inner, .copy__inner {
   width: 1100px;
   margin: 0 auto;
-  position: relative;
-  padding: 0 10px;
-}
-
-.wrapper {
-  position: relative;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  overflow: hidden;
-  min-width: 1120px;
-  background: #f4f4f4;
-}
-.wrapper:after {
-  display: block;
-  position: relative;
-  height: 220;
 }
 
 footer {
-  position: relative;
-  height: 185px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding-top: 35px;
   padding-bottom: 0px;
-  background: rgba(0, 0, 0, 0.3);
+  height: 190px;
 }
 
 .col {
@@ -230,27 +220,27 @@ footer {
   width: 474px;
 }
 
-.page-heder__bottom {
+.page-header__bottom {
   background: #f4f4f4;
   padding-top: 30px;
   padding-bottom: 28px;
 }
 
-.page-heder__logo-wrapper,
-.page-heder__search-wrapper,
-.page-heder__links-wrapper {
+.page-header__logo-wrapper,
+.page-header__search-wrapper,
+.page-header__links-wrapper {
   float: left;
 }
 
-.page-heder__logo-wrapper {
+.page-header__logo-wrapper {
   width: 295px;
 }
 
-.page-heder__search-wrapper {
+.page-header__search-wrapper {
   width: 367px;
 }
 
-.page-heder__links-wrapper {
+.page-header__links-wrapper {
   box-sizing: border-box;
   width: 438px;
   padding-left: 49px;
@@ -685,6 +675,7 @@ footer {
 
 .main-filter__inner-labelradio {
   position: relative;
+  display: block;
   padding-left: 30px;
   cursor: pointer;
 }
@@ -696,10 +687,7 @@ footer {
   border-radius: 50%;
   border: 2px solid #ff6600;
   left: 1px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 0;
 }
 
 .main-filter__inner-radio:checked ~ .main-filter__inner-labelradio:after {
@@ -710,10 +698,7 @@ footer {
   border-radius: 50%;
   background: #ff6600;
   left: 7px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 6px;
 }
 .main-filter__inner-radio:disabled ~ .main-filter__inner-labelradio:before {
   border: 2px solid #dee1e4;
@@ -738,6 +723,7 @@ footer {
 
 .main-filter__inner-labelcheck {
   position: relative;
+  display: block;
   padding-left: 30px;
   cursor: pointer;
 }
@@ -977,13 +963,9 @@ footer {
   margin-left: -36px;
   margin-bottom: -36px;
 }
-
-.info__coll {
+.info__block p {
   margin-left: 36px;
   margin-bottom: 20px;
-}
-
-.info__text {
   font-family: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -1081,7 +1063,6 @@ footer {
 
 .copy {
   padding: 6px;
-  text-align: center;
   border-top: 1px solid #494949;
 }
 
@@ -1091,6 +1072,7 @@ footer {
   font-family: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
   font-size: 12px;
   color: #fff;
+  text-align: center;
 }
 
 .sort {
@@ -1347,7 +1329,7 @@ footer {
 }
 .mobile__row .mobile__foto {
   float: left;
-  width: 160px;
+  width: 154px;
 }
 .mobile__row .article {
   margin-bottom: 5px;
@@ -1358,6 +1340,7 @@ footer {
   margin-right: 8px;
 }
 .mobile__row .mobile__description {
+  position: relative;
   float: right;
   width: 539px;
 }
@@ -1380,9 +1363,10 @@ footer {
   display: none;
 }
 .mobile__row .desc__text {
-  min-height: 95px;
+  min-height: 75px;
   margin: 0;
   padding: 0;
+  padding-bottom: 20px;
   font-family: "open_sansregular", Arial, Helvetica, Garuda, sans-serif;
   font-size: 14px;
   color: #333333;
@@ -1400,6 +1384,12 @@ footer {
 .mobile__row .price__cost {
   text-align: right;
   margin-bottom: 125px;
+}
+.mobile__row .price__apply {
+  position: absolute;
+  bottom: 1px;
+  right: 4px;
+  width: 120px;
 }
 .mobile__row .price__basket {
   float: right;
@@ -1428,6 +1418,11 @@ footer {
 .mobile__list .stars,
 .mobile__list .desc__table {
   display: none;
+}
+.mobile__list .article {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .mobile__list .article__span {
   margin-right: 4px;

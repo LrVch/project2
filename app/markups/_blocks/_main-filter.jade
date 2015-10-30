@@ -46,7 +46,7 @@
                   li.main-filter__inner-item
                     a(href="#").main-filter__inner-reset= name
         //- END генерация чекбоксов
-          
+    // цена      
     li.main-filter__item
       a(href="#").main-filter__trigger  Цена
       ul.main-filter__inner
@@ -55,11 +55,11 @@
             .slider__inner
               .slider__input-wrapper.slider__input-wrapper-min
                 span.slider__pre от
-                input.slider__input#min(type="text" name="min")
+                input.slider__input#min(type="text" name="min" data-minVal="0")
               .slider__input-wrapper.slider__input-wrapper-max
                 span.slider__pre до
-                input.slider__input#max(type="text" name="max")  
-            .slider__slide#slider   
+                input.slider__input#max(type="text" name="max" data-maxVal="26000")  
+            .slider__slide#slider(data-minVal="10000")   
     // цвета  
     li.main-filter__item
       a(href="#").main-filter__trigger  Цвет
@@ -70,7 +70,7 @@
               - for (var i= 0; i <12; i++)
                   li.main-filter__color-item 
                     a(href="#" class= "main-filter__color-link " + ((Index != i) ? "" : "main-filter__color-link--active"))
-      
+    // операционные системы  
     li.main-filter__item
       a(href="#").main-filter__trigger  Операционные системы
       ul.main-filter__inner

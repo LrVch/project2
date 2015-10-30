@@ -1,135 +1,178 @@
-"use strict";
-var mainFilter = (function () {
+(function () {
+  "use strict";
+  var mainFilter = (function () {
 
-  function init() {
-    _setUpListners();
-    _modules();
-  };
+    function init() {
+      _setUpListners();
+      _modules();
+    };
 
-  function _setUpListners() {
-    $('.main-filter__trigger').on('click', _toggleFilter);
-    $(".main-filter__inner-reset").on('click', _reset);
-    $(".main-filter__color-link").on("click", _choice);
-  };
+    function _setUpListners() {
+      $('.main-filter__trigger').on('click', _toggleFilter);
+      $(".main-filter__inner-reset").on('click', _reset);
+      $(".main-filter__color-link").on("click", _choice);
+    };
 
-  function _modules() {
-    _slider();
-  };
-  // аккордеон
-  function _toggleFilter(e) {
-    e.preventDefault();
-    var
-      $this = $(this),
-      list = $this.closest(".main-filter__list"),
-      item = $this.closest(".main-filter__item"),
-      links = list.find(".main-filter__trigger"),
-      content = item.find(".main-filter__inner"),
-      otherContent = list.find(".main-filter__inner"),
-      duration = 300;
+    function _modules() {
+      _slider();
+    };
+    // аккордеон
+    function _toggleFilter(e) {
+      e.preventDefault();
+      var
+        $this = $(this),
+        list = $this.closest(".main-filter__list"),
+        item = $this.closest(".main-filter__item"),
+        links = list.find(".main-filter__trigger"),
+        content = item.find(".main-filter__inner"),
+        otherContent = list.find(".main-filter__inner"),
+        duration = 300;
 
+      if ($this.hasClass("main-filter__trigger--closed")) {
+        $this.removeClass("main-filter__trigger--closed");
+        content.stop(true, true).slideDown(duration)
+      } else {
+        $this.addClass("main-filter__trigger--closed");
+        content.stop(true, true).slideUp(duration)
+      }
 
-    if ($this.hasClass("main-filter__trigger--closed")) {
-      $this.removeClass("main-filter__trigger--closed");
-      content.stop(true,true).slideDown(duration)
-    } else {
-      $this.addClass("main-filter__trigger--closed");
-      content.stop(true,true).slideUp(duration)
-    }
+      /*if (!$this.hasClass("main-filter__trigger--closed")) {
+        links.removeClass("main-filter__trigger--closed");
+        $this.addClass("main-filter__trigger--closed");
 
-    /*if (!$this.hasClass("main-filter__trigger--closed")) {
-      links.removeClass("main-filter__trigger--closed");
-      $this.addClass("main-filter__trigger--closed");
+        otherContent.stop(true,true).slideUp(duration);
+        content.slideDown(duration);
+      } else {
+        content.slideUp(duration);
+        $this.removeClass("main-filter__trigger--closed");
+      }*/
+    };
+    // ресет чекбоксов
+    function _reset(e) {
+      e.preventDefault();
 
-      otherContent.stop(true,true).slideUp(duration);
-      content.slideDown(duration);
-    } else {
-      content.slideUp(duration);
-      $this.removeClass("main-filter__trigger--closed");
-    }*/
-  };
-  // ресет чекбоксов
-  function _reset(e) {
-    e.preventDefault();
+      var
+        $this = $(this),
+        list = $this.closest(".main-filter__inner"),
+        checkBoxs = list.find('input[type="checkbox"]').not('input[type="checkbox"]:disabled');
 
-    var
-      $this = $(this),
-      list = $this.closest(".main-filter__inner"),
-      checkBoxs = list.find('input[type="checkbox"]').not('input[type="checkbox"]:disabled');
-    checkBoxs.removeAttr("checked");
-  };
-  // выбор цвета
-  function _choice(e) {
-    e.preventDefault();
-    var
-      $this = $(this),
-      list = $this.closest(".main-filter__color-list"),
-      links = list.find(".main-filter__color-link");
-      
+      checkBoxs.removeAttr("checked");
+    };
+    // выбор цвета
+    function _choice(e) {
+      e.preventDefault();
+      var
+        $this = $(this),
+        list = $this.closest(".main-filter__color-list"),
+        links = list.find(".main-filter__color-link");
+
       links.removeClass("main-filter__color-link--active");
       $this.addClass("main-filter__color-link--active");
-  }
-  // слайдер
-  function _slider() {
-    var
-      slider = $("#slider"),
-      min = $("#min"),
-      max = $("#max");
-    slider.slider({
-      //step: 10,
-      range: true,
-      min: 0,
-      max: 26000,
-      values: [100, 13000],
-      slide: function (event, ui) {
-        min.val(ui.values[0]);
-        max.val(ui.values[1]);
-      }
-    });
+    }
+    // слайдер
+    function _slider() {
+      var
+        slider = $("#slider"),
+        min = $("#min"),
+        minVal = min.attr("data-minVal"),
+        max = $("#max"),
+        maxVal = max.attr("data-maxVal"),
+        val = {
+          minVal: minVal,
+          maxVal: maxVal
+        };
 
-    // установка значений слайдера в инпуты
-    min.val(slider.slider("values", 0));
-    max.val(slider.slider("values", 1));
+      /*slider.slider({
+        values: [100,10000],
+        create: function (event, ui) {
+          //ui.values.push(100,13000);
+          console.log(this);
+        },
+        //min: 0,
+        max: 26000,
+        //values: [100, 13000],
+        range: true,
+        slide: function (event, ui) {
+          min.val(ui.values[0]);
+          max.val(ui.values[1]);
+          //ui.values.push(12,12);
+        }
+      });*/
 
-    // проверка валидности и диапазона для мнимального значения
-    min.change(function () {
-      var $this = $(this);
+      /*slider.slider("option", {
+        min: 100,
+        max: 26000,
+        values: [100, 13000],
+        range: true,
+        slide: function (event, ui) {
+          min.val(ui.values[0]);
+          max.val(ui.values[1]);
+        }
+      }, minVal);
+*/
+///////////////////////////////////////////////
+
+      slider.slider({
+        range: true,
+        min: 0,
+        max: 26000,
+        values: [100, 13000],
+        slide: function (event, ui) {
+          min.val(ui.values[0]);
+          max.val(ui.values[1]);
+        }
+      });
+
+       // установка значений слайдера в инпуты
+        min.val(slider.slider("values", 0));
+        max.val(slider.slider("values", 1));
+ 
+        // проверка валидности и диапазона для мнимального значения
+        min.change(function () {
+          var $this = $(this);
+
           //oldVal = $this.val();
-      if (!($this.val().match(/^\d+$/))) {
-        console.log("только цифры");
-        return;
-      }
-      if ($this.val() < slider.slider("option", "min")) {
-        console.log("вы ввели отрицателное значение");
-      } else if ($this.val() > slider.slider("values", 1)) {
-        console.log("вы ввели значение больше прового края диапазона");
-      } else {
-        slider.slider("values", 0, $(this).val());
-      }
-      //console.log(oldVal);
-    });
+          if (!($this.val().match(/^\d+$/))) {
+            console.log("только цифры");
+            return;
+          }
+          if ($this.val() < slider.slider("option", "min")) {
+            console.log("вы ввели отрицателное значение");
+          } else if ($this.val() > slider.slider("values", 1)) {
+            console.log("вы ввели значение больше прового края диапазона");
+          } else {
+            slider.slider("values", 0, $(this).val());
+          }
+          //console.log(oldVal);
+        });
 
-    // проверка валидности и диапазона для максимального значения
-    max.change(function () {
-      var $this = $(this);
-      if (!($this.val().match(/^\d+$/))) {
-        console.log("только цифры");
-        return;
-      }
-      if ($this.val() > slider.slider("option", "max")) {
-        console.log("вы ввели значение больше правого края диапазона");
-      } else if ($this.val() < slider.slider("values", 0)) {
-        console.log("вы ввели значение меньше левого края диапазона");
-      } else {
-        slider.slider("values", 1, $(this).val());
-      }
-    });
+        // проверка валидности и диапазона для максимального значения
+        max.change(function () {
+          var $this = $(this);
 
+          if (!($this.val().match(/^\d+$/))) {
+            console.log("только цифры");
+            return;
+          }
+          if ($this.val() > slider.slider("option", "max")) {
+            console.log("вы ввели значение больше правого края диапазона");
+          } else if ($this.val() < slider.slider("values", 0)) {
+            console.log("вы ввели значение меньше левого края диапазона");
+          } else {
+            slider.slider("values", 1, $(this).val());
+          }
+        });
+
+    }
+    
+    return {
+      init: init
+    };
+
+  })();
+  
+  if ($(".main-filter").length) {
+    mainFilter.init();
   }
-  return {
-    init: init
-  };
-
-})();
-
-// Вызов модуля
-mainFilter.init();
+  
+}());
