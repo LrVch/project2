@@ -286,6 +286,11 @@ $line-hiight: 33px;
   .desc__table {
     display: none;
   }
+  .article {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   .article__span {
     margin-right: 4px;
     line-height: $line-hiight;
@@ -348,7 +353,7 @@ $line-hiight: 33px;
     line-height: $line-hiight;
   }
 }
-   
+
 // in grid 
 //======================================================
 .mobile__grid {
@@ -414,12 +419,13 @@ $line-hiight: 33px;
   }
   .price__cost {
     text-align: center;
-    margin-bottom: 2px;  ;
+    margin-bottom: 2px;
+    ;
   }
-   .price__basket {
+  .price__basket {
     float: right;
   }
-  .price__exist { 
+  .price__exist {
     float: left;
     width: 105px;
     padding-right: 3px;
