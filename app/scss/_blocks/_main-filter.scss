@@ -102,6 +102,7 @@
 
 .main-filter__inner-labelradio {
   position: relative;
+  display: block;
   padding-left: 30px;
   cursor: pointer;
   &:before {
@@ -112,8 +113,8 @@
     border-radius: 50%;
     border: 2px solid map-get($clrs, orange);
     left: 1px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    //transform: translateY(-50%);
   }
 }
 
@@ -127,8 +128,8 @@
       border-radius: 50%;
       background: map-get($clrs, orange);
       left: 7px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 6px;
+      //transform: translateY(-50%);
     }
   }
   &:disabled ~ .main-filter__inner-labelradio {
@@ -173,6 +174,7 @@
 
 .main-filter__inner-labelcheck {
   position: relative;
+  display: block;
   padding-left: 30px;
   cursor: pointer;
   &:before {
