@@ -17,23 +17,23 @@
   float: right;
   width: 474px;
 }
-.page-heder__bottom {
+.page-header__bottom {
   background: map-get($clrs, grey-light);
   padding-top: 30px;
   padding-bottom: 28px;;
 }
-.page-heder__logo-wrapper,
-.page-heder__search-wrapper,
-.page-heder__links-wrapper {
+.page-header__logo-wrapper,
+.page-header__search-wrapper,
+.page-header__links-wrapper {
   float: left;
 }
-.page-heder__logo-wrapper {
+.page-header__logo-wrapper {
   width: 295px;
 }
-.page-heder__search-wrapper {
+.page-header__search-wrapper {
   width: 367px;
 }
-.page-heder__links-wrapper {
+.page-header__links-wrapper {
   box-sizing: border-box;
   width: 438px;
   padding-left: 49px;
