@@ -2,26 +2,26 @@
   padding-top: 26px;
   padding-bottom: 44px;
 }
-.info__title{
+
+.info__title {
   margin: 0;
   margin-bottom: 4px;
   padding: 0;
-  
   font-family: $font-family-bold;
   font-size: $font-size-regular-big;
   color: map-get($clrs, grey);
 }
+
 $columnMargin: 36px;
-.info__block{
+.info__block {
   margin-left: -$columnMargin;
   margin-bottom: -$columnMargin;
 }
-.info__coll{
+
+p {
   margin-left: $columnMargin;
   margin-bottom: 20px;
-}
-.info__text{
-    font-family: $font-family-regular;
+  font-family: $font-family-regular;
   font-size: $font-base-size;
   line-height: $font-size-regular-big;
   color: map-get($clrs, grey);
