@@ -231,10 +231,11 @@ $full in $stars {
     display: none;
   }
   .desc__text {
-    min-height: 95px;
+    min-height: 75px;
     margin: 0;
     //margin-bottom: 20px;
     padding: 0;
+    padding-bottom: 20px;
     font-family: $font-family-regular;
     font-size: $font-base-size;
     color: map-get($clrs, grey);
